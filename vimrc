@@ -1,7 +1,18 @@
+set nocompatible
+
 call pathogen#infect()
 call pathogen#helptags()
-syntax on
+
+syntax enable
+
 filetype plugin indent on
-set number
+
+set t_Co=16
 set background=dark
+let g:solarized_termcolor=16
+
 colorscheme solarized
+
+set number
+set listchars=tab:▸\ ,eol:¬
+set list
