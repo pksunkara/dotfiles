@@ -13,6 +13,8 @@ let g:solarized_termcolors=16
 
 colorscheme solarized
 
+set laststatus=2
+set encoding=utf-8
 set number
 set listchars=tab:▸\ ,eol:¬
 set list
