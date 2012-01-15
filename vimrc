@@ -9,7 +9,7 @@ filetype plugin indent on
 
 set t_Co=16
 set background=dark
-let g:solarized_termcolor=16
+let g:solarized_termcolors=16
 
 colorscheme solarized
 
