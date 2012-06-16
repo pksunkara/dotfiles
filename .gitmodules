@@ -1,6 +1,6 @@
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
+	url = git://github.com/kchmck/vim-coffee-script
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = git://github.com/pangloss/vim-javascript
@@ -24,7 +24,7 @@
 	url = git://github.com/leshill/vim-json
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = git://github.com/altercation/vim-colors-solarized
 [submodule "solarized/gnome"]
 	path = solarized/gnome
 	url = git://github.com/sigurdga/gnome-terminal-colors-solarized
@@ -40,3 +40,6 @@
 [submodule "bundle/vim-dasm"]
 	path = bundle/vim-dasm
 	url = git://github.com/pksunkara/vim-dasm
+[submodule "bundle/vim-jade"]
+	path = bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade
