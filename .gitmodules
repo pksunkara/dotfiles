@@ -22,15 +22,6 @@
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = git://github.com/leshill/vim-json
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized
-[submodule "solarized/gnome"]
-	path = solarized/gnome
-	url = git://github.com/sigurdga/gnome-terminal-colors-solarized
-[submodule "solarized/dircolors"]
-	path = solarized/dircolors
-	url = git://github.com/seebi/dircolors-solarized
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://github.com/wincent/Command-T
@@ -46,9 +37,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = git://github.com/scrooloose/syntastic
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils
@@ -76,6 +64,3 @@
 [submodule "bundle/simple-pairs"]
 	path = bundle/simple-pairs
 	url = git://github.com/vim-scripts/simple-pairs
-[submodule "bundle/minibufexpl"]
-	path = bundle/minibufexpl
-	url = git://github.com/fholgado/minibufexpl.vim

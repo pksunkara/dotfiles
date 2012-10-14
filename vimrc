@@ -26,7 +26,6 @@
 " Vim UI {
     set tabpagemax=15
     set showmode
-    set cursorline
     set laststatus=2
     set number
     set showmatch
@@ -34,16 +33,16 @@
     set smartcase
     set list
     set listchars=extends:»,precedes:«,tab:›\ ,trail:‹
-    set wildignore=*.class,*.o,*~,*.pyc,.git,third_party,node_modules
+    set wildignore=*.class,*.o,*~,*.pyc,.git,third_party,node_modules,build
 " }
 
 " Formatting {
     set nowrap
     set autoindent
-    set shiftwidth=4
+    set shiftwidth=2
     set expandtab
-    set tabstop=4
-    set softtabstop=4
+    set tabstop=2
+    set softtabstop=2
     set pastetoggle=<F12>
 " }
 
