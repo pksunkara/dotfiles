@@ -64,3 +64,6 @@
 [submodule "bundle/simple-pairs"]
 	path = bundle/simple-pairs
 	url = git://github.com/vim-scripts/simple-pairs
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter
