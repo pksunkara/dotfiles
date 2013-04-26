@@ -87,13 +87,6 @@
         nnoremap <silent> <leader>gl :Glog<CR>
         nnoremap <silent> <leader>gp :Git push<CR>
     " }
-
-    " MiniBufExpl {
-        nnoremap <silent> <leader>m :TMiniBufExplorer<CR>
-        nnoremap <silent> <leader>mu :UMiniBufExplorer<CR>
-
-        let g:miniBufExplMapWindowNavArrows=1
-    " }
 " }
 
 " Highight {
