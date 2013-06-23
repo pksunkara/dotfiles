@@ -73,3 +73,9 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = git://github.com/honza/vim-snippets
+[submodule "bundle/vim-github-comment"]
+	path = bundle/vim-github-comment
+	url = git://github.com/mmozuras/vim-github-comment
+[submodule "bundle/webapi-vim"]
+	path = bundle/webapi-vim
+	url = git://github.com/mattn/webapi-vim

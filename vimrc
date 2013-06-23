@@ -23,6 +23,10 @@
     set encoding=utf-8
 " }
 
+" Variables {
+    let g:github_user = 'pksunkara'
+" }
+
 " Vim UI {
     set tabpagemax=15
     set showmode
