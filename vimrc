@@ -25,6 +25,7 @@
 
 " Variables {
     let g:github_user = 'pksunkara'
+    let g:Powerline_symbols = 'fancy'
 " }
 
 " Vim UI {
