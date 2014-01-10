@@ -25,7 +25,6 @@
 
 " Variables {
     let g:github_user = 'pksunkara'
-    let g:Powerline_symbols = 'fancy'
 " }
 
 " Vim UI {
@@ -44,10 +43,10 @@
 " Formatting {
     set nowrap
     set autoindent
-    set shiftwidth=2
-    set expandtab
-    set tabstop=2
-    set softtabstop=2
+    set noexpandtab
+    set shiftwidth=4
+    set tabstop=4
+    set softtabstop=4
     set pastetoggle=<F12>
 " }
 
