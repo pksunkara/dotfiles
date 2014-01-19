@@ -91,6 +91,14 @@
         nnoremap <silent> <leader>gl :Glog<CR>
         nnoremap <silent> <leader>gp :Git push<CR>
     " }
+
+    " Golang {
+        autocmd FileType go autocmd BufWritePre <buffer> Fmt
+        autocmd Filetype go nnoremap <silent> <leader>oc :exe 'Godoc ' . expand('<cword>')<CR>
+        autocmd Filetype go nnoremap <silent> <leader>oi :exe 'Import ' . expand('<cword>')<CR>
+        autocmd Filetype go nnoremap <silent> <leader>od :exe 'Drop ' . expand('<cword>')<CR>
+    " }
+
 " }
 
 " Highight {
