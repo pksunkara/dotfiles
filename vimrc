@@ -38,6 +38,8 @@
 	set list
 	set listchars=extends:»,precedes:«,tab:›\ ,trail:‹
 	set wildignore=*.class,*.o,*~,*.pyc,.git,third_party,node_modules,build
+	set vb
+	set t_vb=
 " }
 
 " Formatting {
@@ -65,8 +67,8 @@
 " Plugins {
 	" CtrlP {
 		let g:ctrlp_extensions = ['funky']
+		let g:ctrlp_map = '<leader>t'
 
-		nnoremap <silent> <leader>t :CtrlP<CR>
 		nnoremap <silent> <leader>b :CtrlPBuffer<CR>
 		nnoremap <silent> <leader>f :CtrlPFunky<CR>
 	" }
@@ -77,6 +79,12 @@
 
 	" Bufferline {
 		let g:bufferline_echo = 0
+	" }
+
+	" MultipleCursor {
+		let g:multi_cursor_use_next_key = '<C-d>'
+		let g:multi_cursor_exit_from_visual_mode = 0
+		let g:multi_cursor_exit_from_insert_mode = 0
 	" }
 
 	" Airline {
@@ -110,8 +118,8 @@
 		let g:gitgutter_sign_removed = '⊗'
 		let g:gitgutter_sign_modified_removed = '⊖'
 
-		nnoremap <leader>hs GitGutterStageHunk<CR>
-		nnoremap <leader>hr GitGutterRevertHunk<CR>
+		nnoremap <leader>hs :GitGutterStageHunk<CR>
+		nnoremap <leader>hr :GitGutterRevertHunk<CR>
 
 		nmap <leader>hn <Plug>GitGutterNextHunk
 		nmap <leader>hp <Plug>GitGutterPrevHunk
