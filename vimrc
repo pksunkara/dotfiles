@@ -54,13 +54,6 @@
 
 " Key Mappings {
 	nnoremap ; :
-
-	" Easier moving in tabs and windows
-	map <C-J> <C-W>j<C-W>
-	map <C-K> <C-W>k<C-W>
-	map <C-L> <C-W>l<C-W>
-	map <C-H> <C-W>h<C-W>
-
 	nnoremap Y y$
 " }
 
