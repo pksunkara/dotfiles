@@ -70,6 +70,3 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = git://github.com/sjl/gundo.vim
-[submodule "bundle/vim-orgmode"]
-	path = bundle/vim-orgmode
-	url = git://github.com/jceb/vim-orgmode
