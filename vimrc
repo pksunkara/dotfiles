@@ -36,6 +36,7 @@
 	set ignorecase
 	set smartcase
 	set list
+	set backspace=indent,eol,start
 	set listchars=extends:»,precedes:«,tab:›\ ,trail:‹
 	set wildignore=*.class,*.o,*~,*.pyc,.git,third_party,node_modules,build
 	set vb
