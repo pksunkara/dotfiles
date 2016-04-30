@@ -1,0 +1,12 @@
+{
+  "paths": [
+    {
+      "source": "vim",
+      "destination": "$HOME/.vim"
+    },
+    {
+      "source": "vim/vimrc",
+      "destination": "$HOME/.vimrc"
+    }
+  ]
+}
