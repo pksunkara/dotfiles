@@ -93,15 +93,11 @@
 		nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 		let NERDTreeShowBookmarks=1
-		let NERDTreeIgnore=['\.pyc', '\~$', '\.sw*$', '\.git', '\.hg', '\.svn']
+		let NERDTreeIgnore=['\.pyc', '\~$', '\.sw*$', '\.git', '\.hg', '\.svn', '\node_modules', '*.log']
 		let NERDTreeChDirMode=0
 		let NERDTreeQuitOnOpen=1
 		let NERDTreeShowHidden=1
 		let NERDTreeKeepTreeInNewTab=1
-	" }
-
-	" Tagbar {
-		nnoremap <silent> <leader>l :TagbarToggle<CR>
 	" }
 
 	" GitGutter {
