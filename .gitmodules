@@ -64,3 +64,27 @@
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
 	url = git://github.com/sjl/gundo.vim
+[submodule "vim/bundle/vim-pathogen"]
+	path = vim/bundle/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen
+[submodule "vim/bundle/vim-airline-themes"]
+	path = vim/bundle/vim-airline-themes
+	url = git://github.com/vim-airline/vim-airline-themes
+[submodule "fish/bundle/fishnet"]
+	path = fish/bundle/fishnet
+	url = git://github.com/pksunkara/fishnet
+[submodule "fish/bundle/pisces"]
+	path = fish/bundle/pisces
+	url = git://github.com/laughedelic/pisces
+[submodule "fish/bundle/get"]
+	path = fish/bundle/get
+	url = git://github.com/fisherman/get
+[submodule "fish/bundle/getopts"]
+	path = fish/bundle/getopts
+	url = git://github.com/fisherman/getopts
+[submodule "fish/bundle/segment"]
+	path = fish/bundle/segment
+	url = git://github.com/fisherman/segment
+[submodule "fish/bundle/fish-fastdir"]
+	path = fish/bundle/fish-fastdir
+	url = git://github.com/tuvistavie/fish-fastdir

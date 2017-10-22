@@ -6,12 +6,14 @@
 
 " Environment {
 	" Basic {
+		set shell=/bin/sh
 		set nocompatible
 		set t_Co=16
 		set background=dark
 	" }
 
 	" Pathogen {
+		runtime bundle/vim-pathogen/autoload/pathogen.vim
 		call pathogen#infect()
 		call pathogen#helptags()
 	" }
