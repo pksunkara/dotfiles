@@ -88,3 +88,6 @@
 [submodule "fish/bundle/fish-fastdir"]
 	path = fish/bundle/fish-fastdir
 	url = git://github.com/tuvistavie/fish-fastdir
+[submodule "git"]
+	path = git
+	url = git://gist.github.com/988716.git
