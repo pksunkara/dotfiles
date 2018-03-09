@@ -7,6 +7,10 @@
     {
       "source": "vim/vimrc",
       "destination": "$HOME/.vimrc"
+    },
+    {
+      "source": "fish",
+      "destination": "$HOME/.config/fish"
     }
   ]
 }

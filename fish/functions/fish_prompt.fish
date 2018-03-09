@@ -11,6 +11,7 @@ function fish_prompt
 	set -l is_git_repo (command git rev-parse --is-inside-work-tree ^/dev/null)
 	set -l branch ""
 	set -l git_dirty ""
+	set -l git_stash ""
 
 	if test -n "$is_git_repo"
 		set git_branch_name (command git symbolic-ref --short HEAD ^/dev/null; or command git show-ref --head -s --abbrev | head -n1 ^/dev/null)
@@ -19,10 +20,16 @@ function fish_prompt
 		set -l is_git_dirty (command git status --porcelain --ignore-submodules ^/dev/null)
 		set git_dirty " "
 
+		set -l git_stash_count (command git st)
+
 		if test -n "$is_git_dirty"
 			set git_dirty "☭  "
 		end
+
+		if test $git_stash_count -ne 0
+			set git_stash " $git_stash_count≡ "
+		end
 	end
 
-	echo $start$folder$branch$git_dirty(set_color brblack)"→ "(set_color normal)
+	echo $start$folder$branch$git_stash$git_dirty(set_color brblack)"→ "(set_color normal)
 end

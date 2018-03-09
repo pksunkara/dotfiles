@@ -91,3 +91,6 @@
 [submodule "git"]
 	path = git
 	url = git://gist.github.com/988716.git
+[submodule "ext/tldr/tldr-cpp-client"]
+	path = ext/tldr
+	url = git://github.com/tldr-pages/tldr-cpp-client
