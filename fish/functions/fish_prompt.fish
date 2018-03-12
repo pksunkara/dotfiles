@@ -12,6 +12,7 @@ function fish_prompt
 	set -l branch ""
 	set -l git_dirty ""
 	set -l git_stash ""
+	set -l git_local ""
 
 	if test -n "$is_git_repo"
 		set git_branch_name (command git symbolic-ref --short HEAD ^/dev/null; or command git show-ref --head -s --abbrev | head -n1 ^/dev/null)
@@ -21,6 +22,8 @@ function fish_prompt
 		set git_dirty " "
 
 		set -l git_stash_count (command git st)
+		set -l git_behind_count (command git behind)
+		set -l git_ahead_count (command git ahead)
 
 		if test -n "$is_git_dirty"
 			set git_dirty "☭  "
@@ -29,7 +32,15 @@ function fish_prompt
 		if test $git_stash_count -ne 0
 			set git_stash " $git_stash_count≡ "
 		end
+
+		if test $git_behind_count -ne 0 -a $git_ahead_count -ne 0
+			set git_local " $git_behind_count⇵$git_ahead_count "
+		else if test $git_behind_count -ne 0
+			set git_local " $git_behind_count↓ "
+		else if test $git_ahead_count -ne 0
+			set git_local " $git_ahead_count↑ "
+		end
 	end
 
-	echo $start$folder$branch$git_stash$git_dirty(set_color brblack)"→ "(set_color normal)
+	echo $start$folder$branch$git_local$git_stash$git_dirty(set_color brblack)"→ "(set_color normal)
 end
