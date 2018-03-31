@@ -21,9 +21,9 @@ function fish_prompt
 		set -l is_git_dirty (command git status --porcelain --ignore-submodules ^/dev/null)
 		set git_dirty " "
 
+		set -l git_upstream_branch_name (command git bu ^/dev/null)
+
 		set -l git_stash_count (command git st)
-		set -l git_behind_count (command git behind)
-		set -l git_ahead_count (command git ahead)
 
 		if test -n "$is_git_dirty"
 			set git_dirty "☭  "
@@ -33,12 +33,19 @@ function fish_prompt
 			set git_stash " $git_stash_count≡ "
 		end
 
-		if test $git_behind_count -ne 0 -a $git_ahead_count -ne 0
-			set git_local " $git_behind_count⇵$git_ahead_count "
-		else if test $git_behind_count -ne 0
-			set git_local " $git_behind_count↓ "
-		else if test $git_ahead_count -ne 0
-			set git_local " $git_ahead_count↑ "
+		if test -n "$git_upstream_branch_name"
+			set -l git_behind_count (command git behind)
+			set -l git_ahead_count (command git ahead)
+
+			if test $git_behind_count -ne 0 -a $git_ahead_count -ne 0
+				set git_local " $git_behind_count⇵$git_ahead_count "
+			else if test $git_behind_count -ne 0
+				set git_local " $git_behind_count↓ "
+			else if test $git_ahead_count -ne 0
+				set git_local " $git_ahead_count↑ "
+			end
+		else
+			set git_local " ⇵ "
 		end
 	end
 
