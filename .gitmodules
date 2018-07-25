@@ -94,3 +94,6 @@
 [submodule "ext/tldr/tldr-cpp-client"]
 	path = ext/tldr
 	url = git://github.com/tldr-pages/tldr-cpp-client
+[submodule "vim/bundle/vim-fish"]
+	path = vim/bundle/vim-fish
+	url = git://github.com/dag/vim-fish
