@@ -13,5 +13,5 @@ set -x HOMEBREW_CASK_OPTS --appdir=/Applications
 
 set -x PATH /usr/local/lib/brew/bin $PATH
 
-source $HOME/.config/fish/user.fish
+source $HOME/.config/user.fish
 source $HOME/.config/fish/bundle/fishnet/init.fish
