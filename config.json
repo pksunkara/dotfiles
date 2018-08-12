@@ -1,24 +1,36 @@
 {
-  "paths": [
-    {
-      "source": "vim",
-      "destination": "$HOME/.vim"
-    },
-    {
-      "source": "vim/vimrc",
-      "destination": "$HOME/.vimrc"
-    },
-    {
-      "source": "fish",
-      "destination": "$HOME/.config/fish"
-    },
-    {
-      "source": "git/.gitconfig",
-      "destination": "$HOME/.gitconfig"
-    },
-    {
-      "source": "git/.gitignore",
-      "destination": "$HOME/.gitignore"
+  "presets": {
+    "default": {
+      "plugins": [
+        {
+          "name": "@dotsync/plugin-link",
+          "version": "0.1.0",
+          "data": {
+            "paths": [
+              {
+                "source": "vim",
+                "destination": "/Users/pksunkara/.vim"
+              },
+              {
+                "source": "vim/vimrc",
+                "destination": "/Users/pksunkara/.vimrc"
+              },
+              {
+                "source": "fish",
+                "destination": "/Users/pksunkara/.config/fish"
+              },
+              {
+                "source": "git/.gitconfig",
+                "destination": "/Users/pksunkara/.gitconfig"
+              },
+              {
+                "source": "git/.gitignore",
+                "destination": "/Users/pksunkara/.gitignore"
+              }
+            ]
+          }
+        }
+      ]
     }
-  ]
+  }
 }
