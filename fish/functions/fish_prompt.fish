@@ -36,7 +36,7 @@ function fish_prompt
 			set git_stash " $git_stash_count≡ "
 		end
 
-		if test -n "$git_upstream_branch_name"
+		if test -n "$git_upstream_branch_name" -a "$git_upstream_branch_name" != "@{u}"
 			set -l git_behind_count (command git behind)
 			set -l git_ahead_count (command git ahead)
 
