@@ -76,15 +76,6 @@
 [submodule "fish/bundle/pisces"]
 	path = fish/bundle/pisces
 	url = git://github.com/laughedelic/pisces
-[submodule "fish/bundle/get"]
-	path = fish/bundle/get
-	url = git://github.com/fisherman/get
-[submodule "fish/bundle/getopts"]
-	path = fish/bundle/getopts
-	url = git://github.com/fisherman/getopts
-[submodule "fish/bundle/segment"]
-	path = fish/bundle/segment
-	url = git://github.com/fisherman/segment
 [submodule "fish/bundle/fish-fastdir"]
 	path = fish/bundle/fish-fastdir
 	url = git://github.com/tuvistavie/fish-fastdir
@@ -97,3 +88,6 @@
 [submodule "vim/bundle/vim-fish"]
 	path = vim/bundle/vim-fish
 	url = git://github.com/dag/vim-fish
+[submodule "fish/bundle/fish-getopts"]
+	path = fish/bundle/fish-getopts
+	url = git://github.com/jorgebucaran/fish-getopts
