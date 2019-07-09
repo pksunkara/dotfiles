@@ -4,7 +4,7 @@
       "plugins": [
         {
           "name": "@dotsync/plugin-link",
-          "version": "0.4.0",
+          "version": "^0.5.2",
           "data": {
             "paths": [
               {
@@ -32,8 +32,9 @@
         },
         {
           "name": "@dotsync/plugin-brew",
-          "version": "0.4.0",
+          "version": "^0.5.4",
           "data": {
+            "binary": "/usr/local/lib/brew/bin/brew",
             "taps": [
               {
                 "name": "alexdavid/tap"
@@ -74,10 +75,13 @@
                 "name": "htop"
               },
               {
-                "name": "hugo",
+                "name": "interactive-rebase-tool"
               },
               {
-                "name": "interactive-rebase-tool"
+                "name": "jq"
+              },
+              {
+                "name": "nmap"
               },
               {
                 "name": "python",
@@ -87,26 +91,84 @@
                 "name": "redis"
               },
               {
+                "name": "postgresql",
+                "pin": true
+              },
+              {
                 "name": "tldr"
               }
             ],
             "casks": [
-              {
-                "name": "google-chrome"
-              },
-              {
-                "name": "font-fantasque-sans-mono"
-              },
-              {
-                "name": "font-inconsolata-for-powerline"
-              },
-              {
-                "name": "font-raleway"
-              },
-              {
-                "name": "atom"
-              }
-            ],
+              "atom",
+              "dashlane",
+              "docker",
+              "font-fantasque-sans-mono",
+              "font-inconsolata-for-powerline",
+              "github",
+              "google-chrome",
+              "kitematic",
+              "postico"
+            ]
+          }
+        },
+        {
+          "name": "@dotsync/plugin-atom",
+          "version": "^0.5.4",
+          "data": {
+            "binary": "/usr/local/lib/brew/bin/apm",
+            "keymap": "atom/keymap.cson",
+            "snippets": "atom/snippets.cson",
+            "styles": "atom/styles.less",
+            "init": "atom/init.coffee",
+            "config": "atom/config.cson",
+            "packages": [
+              "atom-material-ui",
+              "atom-material-syntax-dark",
+              "atom-ide-ui",
+              "atom-json-color",
+              "atom-wrap-in-tag",
+              "Stylus",
+              "autoclose-html",
+              "autocomplete-modules",
+              "color-picker",
+              "double-tag",
+              "expose",
+              "file-icons",
+              "git-plus",
+              "git-time-machine",
+              "highlight-selected",
+              "ide-rust",
+              "language-babel",
+              "language-bison-improved",
+              "language-cmake",
+              "language-diff",
+              "language-docker",
+              "language-ejs",
+              "language-fish-shell",
+              "language-graphql",
+              "language-kotlin",
+              "language-lex-flex-new",
+              "language-lua",
+              "language-vue",
+              "linter",
+              "linter-eslint",
+              "linter-pylama",
+              "linter-stylelint",
+              "linter-tslint",
+              "minimap",
+              "minimap-autohider",
+              "minimap-bookmarks",
+              "minimap-find-and-replace",
+              "minimap-highlight-selected",
+              "minimap-selection",
+              "minimap-split-diff",
+              "pigments",
+              "project-manager",
+              "self-closing-tag",
+              "teletype",
+              "todo-show",
+              "toggle-quotes"
+            ]
           }
         }
       ]
