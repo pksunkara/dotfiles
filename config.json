@@ -4,7 +4,7 @@
       "plugins": [
         {
           "name": "@dotsync/plugin-link",
-          "version": "^0.5.2",
+          "version": "^0.5.5",
           "data": {
             "paths": [
               {
@@ -53,6 +53,9 @@
               }
             ],
             "kegs": [
+              {
+                "name": "bat"
+              },
               {
                 "name": "brew-cask-completion"
               },
@@ -113,7 +116,7 @@
         },
         {
           "name": "@dotsync/plugin-atom",
-          "version": "^0.5.4",
+          "version": "^0.5.5",
           "data": {
             "binary": "/usr/local/lib/brew/bin/apm",
             "keymap": "atom/keymap.cson",

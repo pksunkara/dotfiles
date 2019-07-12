@@ -108,6 +108,9 @@
   'Anonymous Function':
     'prefix': 'f'
     'body': '${1:(${2:params})} => ${3:{\n\t$4\n\\}}'
+  'Callback':
+    'prefix': 'cbf'
+    'body': '(${1:err}) => {\n\tif (${1:err}) {\n\t\treturn ${2:cb}(${1:err});\n\t}\n\n\t$3\n}'
   'Set Timeout':
     'prefix': 'timeout'
     'body': 'setTimeout(() => {\n\t$2\n}, ${1:10});'
