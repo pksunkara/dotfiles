@@ -63,6 +63,9 @@
                 "name": "cmake"
               },
               {
+                "name": "exa"
+              },
+              {
                 "name": "fish"
               },
               {
@@ -73,6 +76,9 @@
               },
               {
                 "name": "heroku"
+              },
+              {
+                "name": "hexyl"
               },
               {
                 "name": "htop"

@@ -1,6 +1,7 @@
 set fish_greeting
 
 alias cofe="./node_modules/.bin/coffee -c -o lib src"
+alias ls="exa"
 
 set -x LSCOLORS ExGxBxDxCxEgEdxbxgxcxd
 set -x EDITOR vim
