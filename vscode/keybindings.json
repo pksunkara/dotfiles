@@ -1,0 +1,14 @@
+[
+	{
+		"key": "ctrl+cmd+p",
+		"command": "projectManager.listProjects"
+	},
+	{
+		"key": "alt+cmd+p",
+		"command": "-projectManager.listProjects"
+	},
+	{
+		"key": "ctrl+shift+t",
+		"command": "todohighlight.listAnnotations"
+	}
+]

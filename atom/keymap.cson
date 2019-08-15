@@ -32,3 +32,5 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 '.platform-darwin':
   'cmd-b': 'expose:toggle'
+'atom-workspace':
+  'ctrl-i': 'wrap-in-tag:wrap'

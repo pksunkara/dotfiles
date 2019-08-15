@@ -4,7 +4,7 @@
       "plugins": [
         {
           "name": "@dotsync/plugin-link",
-          "version": "^0.5.5",
+          "version": "^0.6.0",
           "data": {
             "paths": [
               {
@@ -26,13 +26,17 @@
               {
                 "source": "git/.gitignore",
                 "destination": "/Users/pksunkara/.gitignore"
+              },
+              {
+                "source": "tmux.conf",
+                "destination": "/Users/pksunkara/.tmux.conf"
               }
             ]
           }
         },
         {
           "name": "@dotsync/plugin-brew",
-          "version": "^0.5.4",
+          "version": "^0.6.0",
           "data": {
             "binary": "/usr/local/lib/brew/bin/brew",
             "taps": [
@@ -93,10 +97,6 @@
                 "name": "nmap"
               },
               {
-                "name": "python",
-                "pin": true
-              },
-              {
                 "name": "redis"
               },
               {
@@ -105,6 +105,9 @@
               },
               {
                 "name": "tldr"
+              },
+              {
+                "name": "tmux"
               }
             ],
             "casks": [
@@ -120,8 +123,91 @@
           }
         },
         {
+          "name": "@dotsync/plugin-node",
+          "version": "^0.6.0",
+          "data": {
+            "npmrc": "npmrc",
+            "packages": [
+              {
+                "name": "@vue/cli"
+              },
+              {
+                "name": "npm-check"
+              },
+              {
+                "name": "postgraphile"
+              },
+              {
+                "name": "svg-term-cli"
+              },
+              {
+                "name": "yarn"
+              }
+            ]
+          }
+        },
+        {
+          "name": "@dotsync/plugin-python",
+          "version": "^0.6.0",
+          "data": {
+            "packages": [
+              {
+                "name": "asciinema"
+              },
+              {
+                "name": "awscli"
+              },
+              {
+                "name": "pip-autoremove"
+              },
+              {
+                "name": "pipdeptree"
+              },
+              {
+                "name": "pylama"
+              }
+            ]
+          }
+        },
+        {
+          "name": "@dotsync/plugin-vscode",
+          "version": "",
+          "data": {
+            "binary": "/usr/local/lib/brew/bin/code",
+            "settings": "vscode/settings.json",
+            "keybindings": "vscode/keybindings.json",
+            "packages": [
+              "Equinusocio.vsc-material-theme",
+              "file-icons.file-icons",
+              "hwencc.html-tag-wrapper",
+              "sysoev.language-stylus",
+              "formulahendry.auto-close-tag",
+              "formulahendry.auto-rename-tag",
+              "leizongmin.node-module-intellisense",
+              "rust-lang.rust",
+              "mgmcdermott.vscode-language-babel",
+              "naumovs.theme-oceanicnext",
+              "faustinoaq.lex-flex-yacc-bison",
+              "twxs.cmake",
+              "ms-vscode.cmake-tools",
+              "ms-azuretools.vscode-docker",
+              "DigitalBrainstem.javascript-ejs-support",
+              "bmalehorn.vscode-fish",
+              "fwcd.kotlin",
+              "Prisma.vscode-graphql",
+              "octref.vetur",
+              "ms-python.python",
+              "bungcip.better-toml",
+              "dbaeumer.vscode-eslint",
+              "alefragnani.project-manager",
+              "wayou.vscode-todo-highlight",
+              "BriteSnow.vscode-toggle-quotes"
+            ]
+          }
+        },
+        {
           "name": "@dotsync/plugin-atom",
-          "version": "^0.5.5",
+          "version": "^0.6.0",
           "data": {
             "binary": "/usr/local/lib/brew/bin/apm",
             "keymap": "atom/keymap.cson",
@@ -138,7 +224,6 @@
               "Stylus",
               "autoclose-html",
               "autocomplete-modules",
-              "color-picker",
               "double-tag",
               "expose",
               "file-icons",
@@ -156,7 +241,7 @@
               "language-graphql",
               "language-kotlin",
               "language-lex-flex-new",
-              "language-lua",
+              "language-toml",
               "language-vue",
               "linter",
               "linter-eslint",
