@@ -21,9 +21,33 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 #
 # coffeelint: disable=max_line_length
-'.source.ruby, .source.puppet, .source.coffee, .source.python, .source.scss, .source.sass, .source.css.scss, .source.css.sass, .source.css.less, .source.js, .source.go, .source.scala, .source.ts, .source.php, .source.java, .source.css, .source.css .meta.property-value':
+'.source.ruby, .source.puppet, .source.coffee, .source.python, .text.haml, .text.html.ruby, .text.erb, .text.html.ruby .meta.tag, .text.erb .meta.tag, .html.basic, .html.basic .meta.tag, .source.scss, .source.sass, .source.css.scss, .source.css.sass, .source.css.less, .source.js, .source.go, .source.scala, .source.ts, .source.php, .source.java, .source.css, .source.css .meta.property-value, .text.html.php':
   'combak':
     'prefix': 'combak'
+  'idea':
+    'prefix': 'idea'
+  'fixme':
+    'prefix': 'fixme'
+  'xxx':
+    'prefix': 'xxx'
+  'hack':
+    'prefix': 'hack'
+  'note':
+    'prefix': 'note'
+  'review':
+    'prefix': 'review'
+  'bug':
+    'prefix': 'bug'
+  'question':
+    'prefix': 'question'
+  'temp':
+    'prefix': 'temp'
+  'debug':
+    'prefix': 'debug'
+  'optimize':
+    'prefix': 'optimize'
+  'warning':
+    'prefix': 'warning'
 '.source.cmake':
   'Init a CMakeLists Project':
     'prefix': 'init'

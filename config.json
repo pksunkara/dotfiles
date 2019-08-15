@@ -108,7 +108,6 @@
               }
             ],
             "casks": [
-              "atom",
               "dashlane",
               "docker",
               "font-fantasque-sans-mono",
