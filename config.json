@@ -124,8 +124,10 @@
         },
         {
           "name": "@dotsync/plugin-node",
-          "version": "^0.6.0",
+          "version": "^0.6.4",
           "data": {
+            "binary": "/usr/local/lib/brew/bin/node",
+            "npmBinary": "/usr/local/lib/brew/bin/npm",
             "npmrc": "npmrc",
             "packages": [
               {
@@ -133,9 +135,6 @@
               },
               {
                 "name": "npm-check"
-              },
-              {
-                "name": "postgraphile"
               },
               {
                 "name": "svg-term-cli"
@@ -148,8 +147,9 @@
         },
         {
           "name": "@dotsync/plugin-python",
-          "version": "^0.6.0",
+          "version": "^0.6.1",
           "data": {
+            "binary": "/usr/local/lib/brew/bin/pip3",
             "packages": [
               {
                 "name": "asciinema"
@@ -171,7 +171,7 @@
         },
         {
           "name": "@dotsync/plugin-vscode",
-          "version": "",
+          "version": "^0.6.0",
           "data": {
             "binary": "/usr/local/lib/brew/bin/code",
             "settings": "vscode/settings.json",
