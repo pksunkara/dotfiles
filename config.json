@@ -201,7 +201,9 @@
               "dbaeumer.vscode-eslint",
               "alefragnani.project-manager",
               "wayou.vscode-todo-highlight",
-              "BriteSnow.vscode-toggle-quotes"
+              "BriteSnow.vscode-toggle-quotes",
+              "polypus74.trusty-rusty-snippets",
+              "mikestead.dotenv"
             ]
           }
         },
@@ -241,7 +243,6 @@
               "language-graphql",
               "language-kotlin",
               "language-lex-flex-new",
-              "language-toml",
               "language-vue",
               "linter",
               "linter-eslint",

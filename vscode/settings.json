@@ -45,6 +45,12 @@
     },
     "editor.insertSpaces": false,
     "editor.wordWrapColumn": 120,
-    "editor.wordWrap": "bounded",
-    "editor.minimap.renderCharacters": false
+    "editor.minimap.renderCharacters": false,
+    "files.insertFinalNewline": true,
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true,
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnSave": true,
+    "rust.clippy_preference": "on",
+    "[json]": {}
 }

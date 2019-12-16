@@ -55,6 +55,7 @@
       "metrics"
       "spell-check"
       "linter"
+      "minimap"
     ]
     fileSystemWatcher: "atom"
     ignoredNames: [
