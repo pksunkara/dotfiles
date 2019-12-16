@@ -203,7 +203,8 @@
               "wayou.vscode-todo-highlight",
               "BriteSnow.vscode-toggle-quotes",
               "polypus74.trusty-rusty-snippets",
-              "mikestead.dotenv"
+              "mikestead.dotenv",
+              "jsaulou.theme-by-language"
             ]
           }
         },
