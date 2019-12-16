@@ -64,6 +64,9 @@
                 "name": "brew-cask-completion"
               },
               {
+                "name": "clang-format"
+              },
+              {
                 "name": "cmake"
               },
               {
@@ -198,6 +201,8 @@
               "ms-azuretools.vscode-docker",
               "ms-python.python",
               "ms-vscode.cmake-tools",
+              "ms-vscode.cpptools",
+              "ms-vscode.Go",
               "naumovs.theme-oceanicnext",
               "octref.vetur",
               "polypus74.trusty-rusty-snippets",

@@ -51,6 +51,12 @@
   "files.trimTrailingWhitespace": true,
   "editor.snippetSuggestions": "top",
   "rust.clippy_preference": "on",
+  "[c]": {
+    "editor.formatOnSave": true
+  },
+  "[cpp]": {
+    "editor.formatOnSave": true
+  },
   "[css]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true
