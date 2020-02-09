@@ -4,7 +4,7 @@
       "plugins": [
         {
           "name": "@dotsync/plugin-link",
-          "version": "^0.6.0",
+          "version": "^0.7.0",
           "data": {
             "paths": [
               {
@@ -36,187 +36,235 @@
         },
         {
           "name": "@dotsync/plugin-brew",
-          "version": "^0.6.0",
+          "version": "^0.7.0",
           "data": {
             "binary": "/usr/local/lib/brew/bin/brew",
-            "taps": [
-              {
-                "name": "alexdavid/tap"
+            "_modules": {
+              "_uninstall": {
+                "taps": true
               },
-              {
-                "name": "gapple/services"
-              },
-              {
-                "name": "heroku/brew"
-              },
-              {
-                "name": "homebrew/cask"
-              },
-              {
-                "name": "homebrew/cask-fonts"
-              }
-            ],
-            "kegs": [
-              {
-                "name": "bat"
-              },
-              {
-                "name": "brew-cask-completion"
-              },
-              {
-                "name": "clang-format"
-              },
-              {
-                "name": "cmake"
-              },
-              {
-                "name": "exa"
-              },
-              {
-                "name": "fish"
-              },
-              {
-                "name": "fzf"
-              },
-              {
-                "name": "git-branch-status"
-              },
-              {
-                "name": "heroku"
-              },
-              {
-                "name": "hexyl"
-              },
-              {
-                "name": "htop"
-              },
-              {
-                "name": "interactive-rebase-tool"
-              },
-              {
-                "name": "jq"
-              },
-              {
-                "name": "nmap"
-              },
-              {
-                "name": "redis"
-              },
-              {
-                "name": "postgresql",
-                "pin": true
-              },
-              {
-                "name": "tldr"
-              },
-              {
-                "name": "tmux"
-              }
-            ],
-            "casks": [
-              "dashlane",
-              "docker",
-              "font-fantasque-sans-mono",
-              "font-inconsolata-for-powerline",
-              "github",
-              "google-chrome",
-              "kitematic",
-              "postico"
-            ]
+              "taps": [
+                {
+                  "name": "alexdavid/tap"
+                },
+                {
+                  "name": "gapple/services"
+                },
+                {
+                  "name": "heroku/brew"
+                },
+                {
+                  "name": "homebrew/cask"
+                },
+                {
+                  "name": "homebrew/cask-fonts"
+                },
+                {
+                  "name": "rhysd/git-brws",
+                  "remote": "https://github.com/rhysd/git-brws"
+                },
+                {
+                  "name": "termapps/tap",
+                  "remote": "https://github.com/termapps/homebrew-tap"
+                }
+              ],
+              "kegs": [
+                {
+                  "name": "bat"
+                },
+                {
+                  "name": "brew-cask-completion"
+                },
+                {
+                  "name": "clang-format"
+                },
+                {
+                  "name": "cmake"
+                },
+                {
+                  "name": "enquirer"
+                },
+                {
+                  "name": "exa"
+                },
+                {
+                  "name": "fish"
+                },
+                {
+                  "name": "fzf"
+                },
+                {
+                  "name": "git-branch-status"
+                },
+                {
+                  "name": "git-brws"
+                },
+                {
+                  "name": "heroku"
+                },
+                {
+                  "name": "hexyl"
+                },
+                {
+                  "name": "htop"
+                },
+                {
+                  "name": "hyperfine"
+                },
+                {
+                  "name": "interactive-rebase-tool"
+                },
+                {
+                  "name": "jq"
+                },
+                {
+                  "name": "nmap"
+                },
+                {
+                  "name": "postgresql",
+                  "pin": true
+                },
+                {
+                  "name": "redis"
+                },
+                {
+                  "name": "tealdeer"
+                },
+                {
+                  "name": "tmux"
+                },
+                {
+                  "name": "zola"
+                }
+              ],
+              "casks": [
+                "dash",
+                "dashlane",
+                "docker",
+                "font-fantasque-sans-mono",
+                "font-inconsolata-for-powerline",
+                "github",
+                "google-chrome",
+                "kitematic",
+                "postico",
+                "tableplus"
+              ]
+            }
           }
         },
         {
           "name": "@dotsync/plugin-node",
-          "version": "^0.6.4",
+          "version": "^0.7.0",
           "data": {
             "binary": "/usr/local/lib/brew/bin/node",
             "npmBinary": "/usr/local/lib/brew/bin/npm",
             "npmrc": "npmrc",
-            "packages": [
-              {
-                "name": "@vue/cli"
-              },
-              {
-                "name": "npm-check"
-              },
-              {
-                "name": "svg-term-cli"
-              },
-              {
-                "name": "yarn"
-              }
-            ]
+            "_modules": {
+              "packages": [
+                {
+                  "name": "@vue/cli"
+                },
+                {
+                  "name": "npm-check"
+                },
+                {
+                  "name": "svg-term-cli"
+                },
+                {
+                  "name": "yarn"
+                }
+              ]
+            }
           }
         },
         {
           "name": "@dotsync/plugin-python",
-          "version": "^0.6.1",
+          "version": "^0.7.0",
           "data": {
             "binary": "/usr/local/lib/brew/bin/pip3",
-            "packages": [
-              {
-                "name": "asciinema"
-              },
-              {
-                "name": "awscli"
-              },
-              {
-                "name": "pip-autoremove"
-              },
-              {
-                "name": "pipdeptree"
-              },
-              {
-                "name": "pylama"
-              }
-            ]
+            "_modules": {
+              "packages": [
+                {
+                  "name": "asciinema"
+                },
+                {
+                  "name": "awscli"
+                },
+                {
+                  "name": "pip-autoremove"
+                },
+                {
+                  "name": "pipdeptree"
+                },
+                {
+                  "name": "poetry"
+                },
+                {
+                  "name": "pylama"
+                }
+              ]
+            }
           }
         },
         {
           "name": "@dotsync/plugin-vscode",
-          "version": "^0.6.0",
+          "version": "^0.7.0",
           "data": {
             "binary": "/usr/local/lib/brew/bin/code",
             "settings": "vscode/settings.json",
             "keybindings": "vscode/keybindings.json",
-            "packages": [
-              "alefragnani.project-manager",
-              "bmalehorn.vscode-fish",
-              "BriteSnow.vscode-toggle-quotes",
-              "bungcip.better-toml",
-              "CoenraadS.bracket-pair-colorizer-2",
-              "dbaeumer.vscode-eslint",
-              "DigitalBrainstem.javascript-ejs-support",
-              "Equinusocio.vsc-material-theme",
-              "faustinoaq.lex-flex-yacc-bison",
-              "file-icons.file-icons",
-              "formulahendry.auto-close-tag",
-              "formulahendry.auto-rename-tag",
-              "fwcd.kotlin",
-              "hwencc.html-tag-wrapper",
-              "jsaulou.theme-by-language",
-              "leizongmin.node-module-intellisense",
-              "mgmcdermott.vscode-language-babel",
-              "mikestead.dotenv",
-              "ms-azuretools.vscode-docker",
-              "ms-python.python",
-              "ms-vscode.cmake-tools",
-              "ms-vscode.cpptools",
-              "ms-vscode.Go",
-              "naumovs.theme-oceanicnext",
-              "octref.vetur",
-              "polypus74.trusty-rusty-snippets",
-              "Prisma.vscode-graphql",
-              "rust-lang.rust",
-              "sysoev.language-stylus",
-              "twxs.cmake",
-              "wayou.vscode-todo-highlight"
-            ]
+            "_modules": {
+              "_uninstall": {
+                "packages": true
+              },
+              "packages": [
+                "BriteSnow.vscode-toggle-quotes",
+                "CoenraadS.bracket-pair-colorizer-2",
+                "DigitalBrainstem.javascript-ejs-support",
+                "Equinusocio.vsc-material-theme",
+                "JScearcy.rust-doc-viewer",
+                "James-Yu.latex-workshop",
+                "Prisma.vscode-graphql",
+                "alefragnani.project-manager",
+                "aliariff.auto-add-brackets",
+                "bmalehorn.vscode-fish",
+                "bungcip.better-toml",
+                "dbaeumer.vscode-eslint",
+                "equinusocio.vsc-material-theme-icons",
+                "faustinoaq.lex-flex-yacc-bison",
+                "file-icons.file-icons",
+                "formulahendry.auto-close-tag",
+                "formulahendry.auto-rename-tag",
+                "fwcd.kotlin",
+                "gerane.Theme-Earthsong",
+                "hwencc.html-tag-wrapper",
+                "jsaulou.theme-by-language",
+                "leizongmin.node-module-intellisense",
+                "mauve.terraform",
+                "mgmcdermott.vscode-language-babel",
+                "mikestead.dotenv",
+                "ms-azuretools.vscode-docker",
+                "ms-python.python",
+                "ms-vscode.Go",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.cpptools",
+                "naumovs.theme-oceanicnext",
+                "octref.vetur",
+                "polypus74.trusty-rusty-snippets",
+                "redhat.vscode-yaml",
+                "rust-lang.rust",
+                "silvenon.mdx",
+                "sysoev.language-stylus",
+                "twxs.cmake",
+                "viablelab.bracket-padder",
+                "wayou.vscode-todo-highlight"
+              ]
+            }
           }
         },
         {
           "name": "@dotsync/plugin-atom",
-          "version": "^0.6.0",
+          "version": "^0.7.0",
           "data": {
             "binary": "/usr/local/lib/brew/bin/apm",
             "keymap": "atom/keymap.cson",
@@ -224,52 +272,57 @@
             "styles": "atom/styles.less",
             "init": "atom/init.coffee",
             "config": "atom/config.cson",
-            "packages": [
-              "Stylus",
-              "atom-material-ui",
-              "atom-material-syntax-dark",
-              "atom-ide-ui",
-              "atom-json-color",
-              "atom-wrap-in-tag",
-              "autoclose-html",
-              "autocomplete-modules",
-              "double-tag",
-              "expose",
-              "file-icons",
-              "git-plus",
-              "git-time-machine",
-              "highlight-selected",
-              "ide-rust",
-              "language-babel",
-              "language-bison-improved",
-              "language-cmake",
-              "language-diff",
-              "language-docker",
-              "language-ejs",
-              "language-fish-shell",
-              "language-graphql",
-              "language-kotlin",
-              "language-lex-flex-new",
-              "language-vue",
-              "linter",
-              "linter-eslint",
-              "linter-pylama",
-              "linter-stylelint",
-              "linter-tslint",
-              "minimap",
-              "minimap-autohider",
-              "minimap-bookmarks",
-              "minimap-find-and-replace",
-              "minimap-highlight-selected",
-              "minimap-selection",
-              "minimap-split-diff",
-              "pigments",
-              "project-manager",
-              "self-closing-tag",
-              "teletype",
-              "todo-show",
-              "toggle-quotes"
-            ]
+            "_modules": {
+              "_uninstall": {
+                "packages": true
+              },
+              "packages": [
+                "Stylus",
+                "atom-ide-ui",
+                "atom-json-color",
+                "atom-material-syntax-dark",
+                "atom-material-ui",
+                "atom-wrap-in-tag",
+                "autoclose-html",
+                "autocomplete-modules",
+                "double-tag",
+                "expose",
+                "file-icons",
+                "git-plus",
+                "git-time-machine",
+                "highlight-selected",
+                "ide-rust",
+                "language-babel",
+                "language-bison-improved",
+                "language-cmake",
+                "language-diff",
+                "language-docker",
+                "language-ejs",
+                "language-fish-shell",
+                "language-graphql",
+                "language-kotlin",
+                "language-lex-flex-new",
+                "language-vue",
+                "linter",
+                "linter-eslint",
+                "linter-pylama",
+                "linter-stylelint",
+                "linter-tslint",
+                "minimap",
+                "minimap-autohider",
+                "minimap-bookmarks",
+                "minimap-find-and-replace",
+                "minimap-highlight-selected",
+                "minimap-selection",
+                "minimap-split-diff",
+                "pigments",
+                "project-manager",
+                "self-closing-tag",
+                "teletype",
+                "todo-show",
+                "toggle-quotes"
+              ]
+            }
           }
         }
       ]

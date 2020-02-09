@@ -15,11 +15,20 @@ function fish_prompt
 	set -l git_stash ""
 	set -l git_local ""
 
+	set -l lang ""
+	set -l lang_version ""
+	set -l language ""
+
+	if test -e Cargo.toml
+		set lang "rust"
+		set lang_version (rustup show active-toolchain | cut -d' ' -f1 | sed -E "s/-x86_64-apple-darwin//")
+	end
+
 	if test -n "$is_git_repo" -a -z "$have_commits"
-		set branch (set_color red)"(empty) "
+		set branch (set_color brmagenta)"git:("(set_color yellow)"empty"(set_color brmagenta)")"
 	else if test -n "$is_git_repo"
 		set git_branch_name (command git symbolic-ref --short HEAD ^/dev/null; or command git show-ref --head -s --abbrev | head -n1 ^/dev/null)
-		set branch (set_color yellow)$git_branch_name
+		set branch (set_color brmagenta)"git:("(set_color red)$git_branch_name(set_color brmagenta)")"
 
 		set -l is_git_dirty (command git status --porcelain --ignore-submodules ^/dev/null)
 		set git_dirty " "
@@ -52,5 +61,9 @@ function fish_prompt
 		end
 	end
 
-	echo $start$folder$branch$git_local$git_stash$git_dirty(set_color brblack)"→ "(set_color normal)
+	if test -n $lang
+		set language (set_color brmagenta)$lang":("(set_color red)$lang_version(set_color brmagenta)") "
+	end
+
+	echo $start$folder$language$branch(set_color yellow)$git_local$git_stash$git_dirty(set_color brblack)"→ "(set_color normal)
 end

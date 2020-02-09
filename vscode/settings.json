@@ -1,17 +1,18 @@
 {
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-  "auto-close-tag.fullMode": true,
   "projectManager.groupList": true,
   "projectManager.removeCurrentProjectFromList": true,
   "projectManager.git.baseFolders": [
     "$home/Coding"
   ],
+  "window.zoomLevel": 0,
   "workbench.startupEditor": "newUntitledFile",
   "editor.fontFamily": "Fantasque Sans Mono",
   "editor.fontSize": 16,
-  "workbench.colorTheme": "Material Theme Darker High Contrast",
   "workbench.iconTheme": "file-icons",
+  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "Material Theme Ocean",
   "workbench.colorCustomizations": {
     "activityBarBadge.background": "#E57373",
     "list.activeSelectionForeground": "#E57373",
@@ -41,6 +42,7 @@
     "**/.nyc_output": true,
     "**/desktop.ini": true,
     "**/node_modules": true,
+    "**/target": true,
     "**/Thumbs.db": true
   },
   "editor.insertSpaces": false,
@@ -50,7 +52,21 @@
   "editor.renderWhitespace": "boundary",
   "files.trimTrailingWhitespace": true,
   "editor.snippetSuggestions": "top",
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "explorer.confirmDragAndDrop": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "rust.build_on_save": true,
+  "files.watcherExclude": {
+    "**/target/**": true
+  },
+  "task.quickOpen.skip": true,
   "rust.clippy_preference": "on",
+  "auto-close-tag.fullMode": true,
+  "html.mirrorCursorOnMatchingTag": true,
+  "theme-by-language.themes": {
+    "*": "Material Theme Ocean",
+  },
   "[c]": {
     "editor.formatOnSave": true
   },
@@ -70,6 +86,11 @@
     "editor.insertSpaces": true,
     "editor.formatOnSave": true
   },
+  "[jsonc]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
+  },
   "[javascript]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true
@@ -82,8 +103,23 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
-  "theme-by-language.themes": {
-    "*": "Material Theme Darker High Contrast",
-    "javascript": "Oceanic Next (dimmed bg)"
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[yaml]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
+  },
+  "[mdx]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
   }
 }

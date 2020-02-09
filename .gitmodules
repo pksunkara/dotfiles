@@ -88,3 +88,6 @@
 [submodule "fish/bundle/fish-getopts"]
 	path = fish/bundle/fish-getopts
 	url = git://github.com/jorgebucaran/fish-getopts
+[submodule "bundle/vim-elixir"]
+	path = bundle/vim-elixir
+	url = git://github.com/elixir-editors/vim-elixir

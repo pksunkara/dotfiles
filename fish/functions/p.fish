@@ -1,22 +1,27 @@
+function __projects_list
+	find ~/Coding -type d -maxdepth 2 -depth 2 -print
+end
+
 function p -d "Project Manager"
 	set -l curdir (pwd)
-	set -l searching 1
+	set -l search ""
 
 	getopts $argv | while read -l key value
 		switch $key
-			case s
-				set searching 0
+			case _
+				set search $value
+				break
 
-				for project in (find ~/Coding -type d -maxdepth 2 -depth 2 -print)
+			case s
+				for project in (__projects_list)
 					cd $project
-					git status
+					git bs
 				end
 
 				cd $curdir
+				return
 		end
 	end
 
-	if test $searching -ne 0
-		cd ~/Coding/(find ~/Coding -type d -maxdepth 2 -depth 2 -print | cut -d '/' -f5,6 | fzf --height 40% --reverse -1 -q "$argv[1]")
-	end
+	cd ~/Coding/(__projects_list | cut -d '/' -f5,6 | fzf --height 40% --reverse -1 -q "$search")
 end

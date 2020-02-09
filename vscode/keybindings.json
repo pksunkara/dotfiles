@@ -42,7 +42,7 @@
     "when": "focusedCustomEditorIsEditable && !inputFocus"
   },
   {
-    "key": "shift+a",
+    "key": "ctrl+a",
     "command": "explorer.newFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
