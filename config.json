@@ -64,8 +64,7 @@
                   "remote": "https://github.com/rhysd/git-brws"
                 },
                 {
-                  "name": "termapps/tap",
-                  "remote": "https://github.com/termapps/homebrew-tap"
+                  "name": "termapps/tap"
                 }
               ],
               "kegs": [

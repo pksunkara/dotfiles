@@ -40,7 +40,7 @@
 	set list
 	set backspace=indent,eol,start
 	set listchars=extends:»,precedes:«,tab:›\ ,trail:‹
-	set wildignore=*.class,*.o,*~,*.pyc,.git,third_party,node_modules,build
+	set wildignore=*.class,*.o,*~,*.pyc,.git,third_party,node_modules,build,target
 	set vb
 	set t_vb=
 " }
@@ -95,7 +95,7 @@
 		nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 		let NERDTreeShowBookmarks=1
-		let NERDTreeIgnore=['\.pyc', '\~$', '\.sw*$', '\.git', '\.hg', '\.svn', '\node_modules', '*.log']
+		let NERDTreeIgnore=['\.pyc', '\~$', '\.sw*$', '\.git', '\.hg', '\.svn', '\node_modules', '*.log', '\target']
 		let NERDTreeChDirMode=0
 		let NERDTreeQuitOnOpen=1
 		let NERDTreeShowHidden=1

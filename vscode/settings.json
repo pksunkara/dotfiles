@@ -56,11 +56,14 @@
   "editor.autoClosingQuotes": "always",
   "explorer.confirmDragAndDrop": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "rust.build_on_save": true,
+  "files.associations": {
+    "vimrc": "viml"
+  },
   "files.watcherExclude": {
     "**/target/**": true
   },
   "task.quickOpen.skip": true,
+  "rust.build_on_save": true,
   "rust.clippy_preference": "on",
   "auto-close-tag.fullMode": true,
   "html.mirrorCursorOnMatchingTag": true,

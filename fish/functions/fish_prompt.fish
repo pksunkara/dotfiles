@@ -20,15 +20,20 @@ function fish_prompt
 	set -l language ""
 
 	if test -e Cargo.toml
-		set lang "rust"
+		set lang ""
 		set lang_version (rustup show active-toolchain | cut -d' ' -f1 | sed -E "s/-x86_64-apple-darwin//")
 	end
 
+	if test -e package.json
+		set lang ""
+		set lang_version (node --version | sed -E "s/v//")
+	end
+
 	if test -n "$is_git_repo" -a -z "$have_commits"
-		set branch (set_color brmagenta)"git:("(set_color yellow)"empty"(set_color brmagenta)")"
+		set branch (set_color brmagenta)" ("(set_color yellow)"empty"(set_color brmagenta)")"
 	else if test -n "$is_git_repo"
 		set git_branch_name (command git symbolic-ref --short HEAD ^/dev/null; or command git show-ref --head -s --abbrev | head -n1 ^/dev/null)
-		set branch (set_color brmagenta)"git:("(set_color red)$git_branch_name(set_color brmagenta)")"
+		set branch (set_color brmagenta)" ("(set_color red)$git_branch_name(set_color brmagenta)")"
 
 		set -l is_git_dirty (command git status --porcelain --ignore-submodules ^/dev/null)
 		set git_dirty " "
@@ -38,11 +43,11 @@ function fish_prompt
 		set -l git_stash_count (command git st)
 
 		if test -n "$is_git_dirty"
-			set git_dirty "☭  "
+			set git_dirty " 華"
 		end
 
 		if test $git_stash_count -ne 0
-			set git_stash " $git_stash_count≡ "
+			set git_stash " $git_stash_count≡"
 		end
 
 		if test -n "$git_upstream_branch_name" -a "$git_upstream_branch_name" != "@{u}"
@@ -50,19 +55,19 @@ function fish_prompt
 			set -l git_ahead_count (command git ahead)
 
 			if test $git_behind_count -ne 0 -a $git_ahead_count -ne 0
-				set git_local " $git_behind_count⇵$git_ahead_count "
+				set git_local " $git_behind_count⇵$git_ahead_count"
 			else if test $git_behind_count -ne 0
-				set git_local " $git_behind_count↓ "
+				set git_local " $git_behind_count↓"
 			else if test $git_ahead_count -ne 0
-				set git_local " $git_ahead_count↑ "
+				set git_local " $git_ahead_count↑"
 			end
 		else
-			set git_local " ⇵ "
+			set git_local " ⇵"
 		end
 	end
 
 	if test -n $lang
-		set language (set_color brmagenta)$lang":("(set_color red)$lang_version(set_color brmagenta)") "
+		set language (set_color brmagenta)$lang" ("(set_color red)$lang_version(set_color brmagenta)") "
 	end
 
 	echo $start$folder$language$branch(set_color yellow)$git_local$git_stash$git_dirty(set_color brblack)"→ "(set_color normal)
