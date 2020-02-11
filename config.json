@@ -120,8 +120,10 @@
                   "name": "nmap"
                 },
                 {
-                  "name": "postgresql",
-                  "pin": true
+                  "name": "postgresql"
+                },
+                {
+                  "name": "reattach-to-user-namespace"
                 },
                 {
                   "name": "redis"
@@ -141,7 +143,7 @@
                 "dashlane",
                 "docker",
                 "font-fantasque-sans-mono",
-                "font-inconsolata-for-powerline",
+                "font-firamono-nerd-font",
                 "github",
                 "google-chrome",
                 "kitematic",

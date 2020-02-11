@@ -19,14 +19,19 @@ function fish_prompt
 	set -l lang_version ""
 	set -l language ""
 
+	if test -e package.json
+		set lang ""
+		set lang_version (node --version | sed -E "s/v//")
+	end
+
 	if test -e Cargo.toml
 		set lang ""
 		set lang_version (rustup show active-toolchain | cut -d' ' -f1 | sed -E "s/-x86_64-apple-darwin//")
 	end
 
-	if test -e package.json
-		set lang ""
-		set lang_version (node --version | sed -E "s/v//")
+	if test -e mix.exs
+		set lang ""
+		set lang_version (elixir -v | sed -n '3,/^$/p' | sed -E -e "s/.*Elixir //" -e "s/ .*//")
 	end
 
 	if test -n "$is_git_repo" -a -z "$have_commits"
@@ -70,5 +75,5 @@ function fish_prompt
 		set language (set_color brmagenta)$lang" ("(set_color red)$lang_version(set_color brmagenta)") "
 	end
 
-	echo $start$folder$language$branch(set_color yellow)$git_local$git_stash$git_dirty(set_color brblack)"→ "(set_color normal)
+	echo $start$folder$language$branch(set_color yellow)$git_local$git_stash$git_dirty(set_color brblack)"→"(set_color normal)" "
 end
