@@ -97,3 +97,6 @@
 [submodule "vim/bundle/vim-vue"]
 	path = vim/bundle/vim-vue
 	url = git://github.com/posva/vim-vue
+[submodule "vim/bundle/vim-toml"]
+	path = vim/bundle/vim-toml
+	url = git://github.com/cespare/vim-toml
