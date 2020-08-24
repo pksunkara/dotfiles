@@ -51,6 +51,10 @@
                   "name": "gapple/services"
                 },
                 {
+                  "name": "github/gh",
+                  "remote": "https://github.com/github/homebrew-gh"
+                },
+                {
                   "name": "heroku/brew"
                 },
                 {
@@ -93,6 +97,9 @@
                   "name": "fzf"
                 },
                 {
+                  "name": "gh"
+                },
+                {
                   "name": "git-branch-status"
                 },
                 {
@@ -105,6 +112,9 @@
                   "name": "hexyl"
                 },
                 {
+                  "name": "hledger"
+                },
+                {
                   "name": "htop"
                 },
                 {
@@ -115,6 +125,12 @@
                 },
                 {
                   "name": "jq"
+                },
+                {
+                  "name": "lazydocker"
+                },
+                {
+                  "name": "lazygit"
                 },
                 {
                   "name": "nmap"
@@ -133,6 +149,9 @@
                 },
                 {
                   "name": "tmux"
+                },
+                {
+                  "name": "tokei"
                 },
                 {
                   "name": "zola"
@@ -164,6 +183,10 @@
               "packages": [
                 {
                   "name": "@vue/cli"
+                },
+                {
+                  "name": "lerna-update-wizard",
+                  "version": "0.17.8"
                 },
                 {
                   "name": "npm-check"
@@ -222,12 +245,16 @@
                 "BriteSnow.vscode-toggle-quotes",
                 "CoenraadS.bracket-pair-colorizer-2",
                 "DigitalBrainstem.javascript-ejs-support",
+                "EliverLara.andromeda",
                 "Equinusocio.vsc-material-theme",
                 "JScearcy.rust-doc-viewer",
                 "James-Yu.latex-workshop",
                 "Prisma.vscode-graphql",
+                "XadillaX.viml",
                 "alefragnani.project-manager",
                 "aliariff.auto-add-brackets",
+                "aprilandjan.ascii-tree-generator",
+                "attilabuti.brainfuck-syntax",
                 "bmalehorn.vscode-fish",
                 "bungcip.better-toml",
                 "dbaeumer.vscode-eslint",
@@ -239,11 +266,17 @@
                 "fwcd.kotlin",
                 "gerane.Theme-Earthsong",
                 "golang.Go",
+                "golang.go",
                 "hashicorp.terraform",
                 "hwencc.html-tag-wrapper",
                 "leizongmin.node-module-intellisense",
+                "liviuschera.noctis",
+                "mark-hansen.hledger-vscode",
+                "matklad.rust-analyzer",
+                "mechatroner.rainbow-csv",
                 "mgmcdermott.vscode-language-babel",
                 "mikestead.dotenv",
+                "mjmcloug.vscode-elixir",
                 "ms-azuretools.vscode-docker",
                 "ms-python.python",
                 "ms-vscode.cmake-tools",
@@ -252,11 +285,16 @@
                 "octref.vetur",
                 "polypus74.trusty-rusty-snippets",
                 "redhat.vscode-yaml",
+                "sdras.night-owl",
                 "silvenon.mdx",
                 "sysoev.language-stylus",
                 "twxs.cmake",
+                "usernamehw.errorlens",
                 "viablelab.bracket-padder",
-                "wayou.vscode-todo-highlight"
+                "waderyan.gitblame",
+                "wayou.vscode-todo-highlight",
+                "yzhang.markdown-all-in-one",
+                "zenghongtu.vscode-asciiflow2"
               ]
             }
           }
