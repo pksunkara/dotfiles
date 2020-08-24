@@ -36,6 +36,7 @@ function fish_prompt
 
 	if test -n "$is_git_repo" -a -z "$have_commits"
 		set branch (set_color brmagenta)" ("(set_color yellow)"empty"(set_color brmagenta)")"
+		set git_dirty " "
 	else if test -n "$is_git_repo"
 		set git_branch_name (command git symbolic-ref --short HEAD ^/dev/null; or command git show-ref --head -s --abbrev | head -n1 ^/dev/null)
 		set branch (set_color brmagenta)" ("(set_color red)$git_branch_name(set_color brmagenta)")"

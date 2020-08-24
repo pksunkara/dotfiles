@@ -90,5 +90,13 @@
   {
     "key": "cmd+i",
     "command": "workbench.action.focusPanel"
+  },
+  {
+    "key": "cmd+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal"
   }
 ]

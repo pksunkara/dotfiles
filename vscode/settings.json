@@ -1,18 +1,13 @@
 {
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-  "projectManager.groupList": true,
-  "projectManager.removeCurrentProjectFromList": true,
-  "projectManager.git.baseFolders": [
-    "$home/Coding"
-  ],
   "window.zoomLevel": 0,
   "workbench.startupEditor": "newUntitledFile",
   "editor.fontFamily": "Fantasque Sans Mono",
   "editor.fontSize": 16,
   "workbench.iconTheme": "file-icons",
   "workbench.statusBar.visible": true,
-  "workbench.colorTheme": "Material Theme Ocean",
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.colorCustomizations": {
     "activityBarBadge.background": "#E57373",
     "list.activeSelectionForeground": "#E57373",
@@ -63,13 +58,10 @@
     "**/target/**": true
   },
   "task.quickOpen.skip": true,
-  "rust.build_on_save": true,
-  "rust.clippy_preference": "on",
   "auto-close-tag.fullMode": true,
-  "html.mirrorCursorOnMatchingTag": true,
-  "theme-by-language.themes": {
-    "*": "Material Theme Ocean",
-  },
+  "editor.renameOnType": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.minimap.enabled": false,
   "[c]": {
     "editor.formatOnSave": true
   },
@@ -120,9 +112,53 @@
     "editor.insertSpaces": true,
     "editor.formatOnSave": true
   },
+  "[markdown]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
   "[mdx]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "editor.formatOnSave": true
-  }
+  },
+  "[terraform]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
+  },
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
+  },
+  "python.linting.pylintEnabled": false,
+  "python.linting.pylamaEnabled": true,
+  "python.linting.enabled": true,
+  "terraform.telemetry.enabled": false,
+  "markdown.extension.toc.githubCompatibility": true,
+  "markdown.extension.toc.orderedList": true,
+  "projectManager.groupList": true,
+  "projectManager.removeCurrentProjectFromList": true,
+  "projectManager.git.baseFolders": [
+    "$home/Coding"
+  ],
+  "projectManager.git.maxDepthRecursion": 2,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+  "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+  "rust-analyzer.debug.openDebugPane": true,
+  "workbench.sideBar.location": "left",
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
+  },
+  "terraform.languageServer": {
+    "enabled": true,
+    "args": []
+  },
+  "go.useLanguageServer": true
 }
