@@ -51,8 +51,7 @@
                   "name": "gapple/services"
                 },
                 {
-                  "name": "github/gh",
-                  "remote": "https://github.com/github/homebrew-gh"
+                  "name": "github/gh"
                 },
                 {
                   "name": "heroku/brew"
@@ -121,7 +120,7 @@
                   "name": "hyperfine"
                 },
                 {
-                  "name": "interactive-rebase-tool"
+                  "name": "git-interactive-rebase-tool"
                 },
                 {
                   "name": "jq"
