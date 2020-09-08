@@ -3,6 +3,17 @@
     "default": {
       "plugins": [
         {
+          "name": "@dotsync/plugin-cmd",
+          "version": "^0.8.0",
+          "data": {
+            "commands": [
+              {
+                "command": "xcode-select --install"
+              }
+            ]
+          }
+        },
+        {
           "name": "@dotsync/plugin-link",
           "version": "^0.8.0",
           "data": {
@@ -84,13 +95,13 @@
                   "name": "cmake"
                 },
                 {
+                  "name": "docker-slim"
+                },
+                {
                   "name": "enquirer"
                 },
                 {
                   "name": "exa"
-                },
-                {
-                  "name": "fish"
                 },
                 {
                   "name": "fzf"
@@ -99,10 +110,19 @@
                   "name": "gh"
                 },
                 {
+                  "name": "git-delta"
+                },
+                {
+                  "name": "git-absorb"
+                },
+                {
                   "name": "git-branch-status"
                 },
                 {
                   "name": "git-brws"
+                },
+                {
+                  "name": "git-interactive-rebase-tool"
                 },
                 {
                   "name": "heroku"
@@ -118,9 +138,6 @@
                 },
                 {
                   "name": "hyperfine"
-                },
-                {
-                  "name": "git-interactive-rebase-tool"
                 },
                 {
                   "name": "jq"
@@ -169,6 +186,14 @@
                 "tableplus"
               ]
             }
+          }
+        },
+        {
+          "name": "@dotsync/plugin-shell",
+          "version": "^0.8.0",
+          "data": {
+            "type": "fish",
+            "binary": "/usr/local/lib/brew/bin/fish"
           }
         },
         {
@@ -264,7 +289,6 @@
                 "formulahendry.auto-rename-tag",
                 "fwcd.kotlin",
                 "gerane.Theme-Earthsong",
-                "golang.Go",
                 "golang.go",
                 "hashicorp.terraform",
                 "hwencc.html-tag-wrapper",
