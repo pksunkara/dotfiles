@@ -31,12 +31,8 @@
                 "destination": "/Users/pksunkara/.config/fish"
               },
               {
-                "source": "git/.gitconfig",
-                "destination": "/Users/pksunkara/.gitconfig"
-              },
-              {
-                "source": "git/.gitignore",
-                "destination": "/Users/pksunkara/.gitignore"
+                "source": "git",
+                "destination": "/Users/pksunkara/.config/git"
               },
               {
                 "source": "tmux.conf",
@@ -178,7 +174,7 @@
                 "dashlane",
                 "docker",
                 "font-fantasque-sans-mono",
-                "font-firamono-nerd-font",
+                "font-fira-mono-nerd-font",
                 "github",
                 "google-chrome",
                 "kitematic",
@@ -209,8 +205,7 @@
                   "name": "@vue/cli"
                 },
                 {
-                  "name": "lerna-update-wizard",
-                  "version": "0.17.8"
+                  "name": "lerna-update-wizard"
                 },
                 {
                   "name": "npm-check"
@@ -239,7 +234,7 @@
                   "name": "awscli"
                 },
                 {
-                  "name": "pip-autoremove"
+                  "name": "python3-pip-autoremove"
                 },
                 {
                   "name": "pipdeptree"
