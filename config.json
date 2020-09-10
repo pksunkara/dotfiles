@@ -234,6 +234,9 @@
                   "name": "awscli"
                 },
                 {
+                  "name": "pip-autoremove"
+                },
+                {
                   "name": "python3-pip-autoremove"
                 },
                 {
