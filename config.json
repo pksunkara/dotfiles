@@ -121,6 +121,9 @@
                   "name": "git-interactive-rebase-tool"
                 },
                 {
+                  "name": "git-trim"
+                },
+                {
                   "name": "heroku"
                 },
                 {
@@ -179,6 +182,7 @@
                 "google-chrome",
                 "kitematic",
                 "postico",
+                "skitch",
                 "tableplus"
               ]
             }
