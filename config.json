@@ -157,6 +157,9 @@
                   "name": "redis"
                 },
                 {
+                  "name": "starship"
+                },
+                {
                   "name": "tealdeer"
                 },
                 {

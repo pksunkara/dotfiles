@@ -1,0 +1,36 @@
+add_newline = false
+prompt_order = ["character", "directory", "package", "elixir", "nodejs", "rust"]
+
+[character]
+symbol = "●"
+error_symbol = "●"
+use_symbol_for_status = true
+style_success = "green"
+style_failure = "red"
+
+[directory]
+prefix = ""
+style = "cyan"
+truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+truncation_length = 10
+
+[directory.substitutions]
+"~/Coding" = "⍴"
+"~" = "⌂"
+
+[package]
+symbol = " "
+style = "208"
+
+[elixir]
+symbol = " "
+style = "red"
+
+[nodejs]
+symbol = " "
+style = "red"
+
+[rust]
+symbol = " "
+style = "red"
