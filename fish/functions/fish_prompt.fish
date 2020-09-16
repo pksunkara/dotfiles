@@ -20,8 +20,10 @@ function fish_prompt
 	set -l language ""
 
 	if test -e package.json
-		set lang ""
-		set lang_version (node --version | sed -E "s/v//")
+		if type -q node
+			set lang ""
+			set lang_version (node --version | sed -E "s/v//")
+		end
 	end
 
 	if test -e Cargo.toml

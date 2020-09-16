@@ -91,3 +91,6 @@
 [submodule "vim/bundle/vim-toml"]
 	path = vim/bundle/vim-toml
 	url = git://github.com/cespare/vim-toml
+[submodule "fish/bundle/bass"]
+	path = fish/bundle/bass
+	url = git://github.com/edc/bass
