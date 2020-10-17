@@ -1,0 +1,40 @@
+{
+  "Styled Components Import": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "sci",
+    "body": [
+      "import styled${1:, { css \\}} from 'styled-components';",
+      "",
+      "$0",
+    ],
+    "description": "Import styled components"
+  },
+  "Styled Components Definition": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "scd",
+    "body": [
+      "export const ${1} = styled.${2:div}`",
+      "  $0",
+      "`;"
+    ],
+    "description": "Define styled components"
+  },
+  "Styled Components Extension": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "sce",
+    "body": [
+      "export const ${1} = styled($2)`",
+      "  $0",
+      "`;"
+    ],
+    "description": "Define styled components"
+  },
+  "Styled Components Props": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "scp",
+    "body": [
+      "(props) => props.${1:theme.$2}$0"
+    ],
+    "description": "Define styled components"
+  }
+}

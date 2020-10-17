@@ -1,15 +1,27 @@
 [
   {
     "key": "ctrl+cmd+p",
-    "command": "projectManager.listProjects"
+    "command": "projects.open"
   },
   {
     "key": "alt+cmd+p",
-    "command": "-projectManager.listProjects"
+    "command": "-projects.open"
   },
   {
-    "key": "ctrl+shift+t",
-    "command": "todohighlight.listAnnotations"
+    "key": "ctrl+cmd+g",
+    "command": "projects.openGroup"
+  },
+  {
+    "key": "shift+alt+cmd+x",
+    "command": "-projects.openGroup"
+  },
+  {
+    "key": "ctrl+cmd+x",
+    "command": "projects.switchGroup"
+  },
+  {
+    "key": "alt+cmd+x",
+    "command": "-projects.switchGroup"
   },
   {
     "key": "cmd+y",
@@ -81,6 +93,10 @@
   },
   {
     "key": "cmd+m",
+    "command": "editor.action.toggleMinimap"
+  },
+  {
+    "key": "cmd+h",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
@@ -88,7 +104,7 @@
     "command": "-workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "cmd+i",
+    "key": "cmd+shift+i",
     "command": "workbench.action.focusPanel"
   },
   {
@@ -98,5 +114,57 @@
   {
     "key": "ctrl+`",
     "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer"
+  },
+  {
+    "key": "alt+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-workbench.view.search",
+  },
+  {
+    "key": "alt+f",
+    "command": "workbench.view.search",
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm"
+  },
+  {
+    "key": "alt+g",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "shift+cmd+x",
+    "command": "-workbench.view.extensions"
+  },
+  {
+    "key": "alt+x",
+    "command": "workbench.view.extensions"
+  },
+  {
+    "key": "alt+i",
+    "command": "workbench.view.extension.github-pull-requests"
+  },
+  {
+    "key": "alt+d",
+    "command": "workbench.view.extension.dockerView"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.view.extension.projects"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.view.extension.todo"
+  },
+  {
+    "key": "alt+z",
+    "command": "-editor.action.toggleWordWrap"
   }
 ]

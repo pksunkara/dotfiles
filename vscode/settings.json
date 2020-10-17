@@ -5,7 +5,8 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.iconTheme": "file-icons",
   "workbench.statusBar.visible": true,
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.sideBar.location": "left",
+  "workbench.colorTheme": "Noctis Obscuro",
   "workbench.colorCustomizations": {
     "activityBarBadge.background": "#E57373",
     "list.activeSelectionForeground": "#E57373",
@@ -61,6 +62,7 @@
   "editor.semanticHighlighting.enabled": true,
   "editor.minimap.enabled": false,
   "task.quickOpen.skip": true,
+  "terminal.integrated.shell.linux": "/usr/bin/fish",
   "auto-close-tag.fullMode": true,
   "[c]": {
     "editor.formatOnSave": true
@@ -91,7 +93,8 @@
   "[javascript]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[rust]": {
     "editor.insertSpaces": true,
@@ -105,11 +108,13 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
     "editor.tabSize": 2,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
     "editor.tabSize": 2,
@@ -138,17 +143,10 @@
   "python.linting.pylamaEnabled": true,
   "python.linting.enabled": true,
   "markdown.extension.toc.orderedList": true,
-  "projectManager.groupList": true,
-  "projectManager.removeCurrentProjectFromList": true,
-  "projectManager.git.baseFolders": [
-    "$home/Coding"
-  ],
-  "projectManager.git.maxDepthRecursion": 2,
   "rust-analyzer.procMacro.enable": true,
   "rust-analyzer.cargo.loadOutDirsFromCheck": true,
   "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
   "rust-analyzer.debug.openDebugPane": true,
-  "workbench.sideBar.location": "left",
   "terraform.indexing": {
     "enabled": false,
     "liveIndexing": false,
@@ -159,8 +157,47 @@
     ]
   },
   "terraform.languageServer": {
-    "enabled": true,
-    "args": []
+    "external": true
   },
-  "go.useLanguageServer": true
+  "go.useLanguageServer": true,
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "default"
+    },
+    {
+      "label": "All Issues",
+      "query": "state:open repo:${owner}/${repository} sort:created-desc"
+    }
+  ],
+  "git.autofetch": true,
+  "codesnap.transparentBackground": true,
+  "highlight.regexes": {
+    "(TODO)": {
+      "regexFlags": "g",
+      "decorations": [
+        {
+          "color": "#ffffff",
+          "backgroundColor": "#ffbd2a",
+          "overviewRulerColor": "rgba(255, 189, 42, 0.8)"
+        },
+      ]
+    },
+    "(FIXME)": {
+      "regexFlags": "g",
+      "decorations": [
+        {
+          "color": "#fff",
+          "backgroundColor": "#f06292",
+          "overviewRulerColor": "rgba(240, 98, 146, 0.8)"
+        }
+      ]
+    }
+  },
+  "projects.checkDirty": true,
+  "projects.checkPaths": true,
+  "projects.statusbarPriority": 0,
+  "projects.refreshRoots": [
+    "~/Coding"
+  ]
 }
