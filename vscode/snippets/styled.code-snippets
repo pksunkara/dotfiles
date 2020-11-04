@@ -13,7 +13,7 @@
     "scope": "javascript,javascriptreact",
     "prefix": "scd",
     "body": [
-      "export const ${1} = styled.${2:div}`",
+      "export const ${1:Container} = styled.${2:div}`",
       "  $0",
       "`;"
     ],

@@ -120,8 +120,18 @@
     "command": "-workbench.view.explorer"
   },
   {
-    "key": "alt+e",
+    "key": "alt+x",
     "command": "workbench.view.explorer"
+  },
+  {
+    "key": "alt+s",
+    "command": "-todo.toggleStart",
+    "when": "editorTextFocus && editorLangId == 'todo'"
+  },
+  {
+    "key": "alt+s",
+    "command": "-markdown.extension.editing.toggleStrikethrough",
+    "when": "false"
   },
   {
     "key": "shift+cmd+f",
@@ -136,7 +146,7 @@
     "command": "-workbench.view.scm"
   },
   {
-    "key": "alt+g",
+    "key": "alt+s",
     "command": "workbench.view.scm"
   },
   {
@@ -144,15 +154,11 @@
     "command": "-workbench.view.extensions"
   },
   {
-    "key": "alt+x",
-    "command": "workbench.view.extensions"
-  },
-  {
-    "key": "alt+i",
+    "key": "alt+g",
     "command": "workbench.view.extension.github-pull-requests"
   },
   {
-    "key": "alt+d",
+    "key": "alt+k",
     "command": "workbench.view.extension.dockerView"
   },
   {
@@ -166,5 +172,9 @@
   {
     "key": "alt+z",
     "command": "-editor.action.toggleWordWrap"
+  },
+  {
+    "key": "alt+l",
+    "command": "outline.focus"
   }
 ]
