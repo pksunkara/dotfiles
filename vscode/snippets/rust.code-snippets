@@ -1,0 +1,10 @@
+{
+  "Declare variable": {
+    "scope": "rust,typescriptreact",
+    "prefix": "let",
+    "body": [
+      "let ${1:mut }${4:name}${2:: ${3:type}} = $5;$0"
+    ],
+    "description": "Declare a variable "
+  }
+}

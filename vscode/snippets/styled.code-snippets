@@ -1,16 +1,6 @@
 {
-  "Styled Components Import": {
-    "scope": "javascript,javascriptreact",
-    "prefix": "sci",
-    "body": [
-      "import styled${1:, { css \\}} from 'styled-components';",
-      "",
-      "$0",
-    ],
-    "description": "Import styled components"
-  },
   "Styled Components Definition": {
-    "scope": "javascript,javascriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "scd",
     "body": [
       "export const ${1:Container} = styled.${2:div}`",
@@ -20,21 +10,21 @@
     "description": "Define styled components"
   },
   "Styled Components Extension": {
-    "scope": "javascript,javascriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "sce",
     "body": [
-      "export const ${1} = styled($2)`",
+      "export const ${1:Container} = styled($2)`",
       "  $0",
       "`;"
     ],
-    "description": "Define styled components"
+    "description": "Define styled components that extends another"
   },
   "Styled Components Props": {
-    "scope": "javascript,javascriptreact",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "scp",
     "body": [
-      "(props) => props.${1:theme.$2}$0"
+      "({ ${1:theme} }) => ${2:$1}$0"
     ],
-    "description": "Define styled components"
+    "description": "Use props in a styled component"
   }
 }

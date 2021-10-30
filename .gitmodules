@@ -73,9 +73,6 @@
 [submodule "vim/bundle/vim-fish"]
 	path = vim/bundle/vim-fish
 	url = git://github.com/dag/vim-fish
-[submodule "fish/bundle/fish-getopts"]
-	path = fish/bundle/fish-getopts
-	url = git://github.com/jorgebucaran/fish-getopts
 [submodule "vim/bundle/vim-devicons"]
 	path = vim/bundle/vim-devicons
 	url = git://github.com/ryanoasis/vim-devicons
@@ -88,9 +85,12 @@
 [submodule "vim/bundle/vim-vue"]
 	path = vim/bundle/vim-vue
 	url = git://github.com/posva/vim-vue
-[submodule "vim/bundle/vim-toml"]
-	path = vim/bundle/vim-toml
-	url = git://github.com/cespare/vim-toml
 [submodule "fish/bundle/bass"]
 	path = fish/bundle/bass
 	url = git://github.com/edc/bass
+[submodule "vim/bundle/vim-toml"]
+	path = vim/bundle/vim-toml
+	url = git://github.com/cespare/vim-toml
+[submodule "fish/bundle/fish-getopts"]
+	path = fish/bundle/fish-getopts
+	url = git://github.com/jorgebucaran/getopts.fish

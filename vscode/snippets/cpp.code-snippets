@@ -1,0 +1,36 @@
+{
+  "Output to stdout": {
+    "scope": "cpp",
+    "prefix": "cout",
+    "body": [
+      "std::cout << ${1:\"}${2:message}$1 << std::endl;$0",
+    ],
+    "description": "Print to stdout"
+  },
+  "Output to stderr": {
+    "scope": "cpp",
+    "prefix": "cerr",
+    "body": [
+      "std::cerr << ${1:\"}${2:message}$1 << std::endl;$0",
+    ],
+    "description": "Print to stdout"
+  },
+  "Read input": {
+    "scope": "cpp",
+    "prefix": "cin",
+    "body": [
+      "std::cin >> ${1:variable};$0`",
+    ],
+    "description": "Read from stdin into variable"
+  },
+  "Loop over vector": {
+    "scope": "cpp",
+    "prefix": "forv",
+    "body": [
+      "for (auto& ${1:it} : ${2:vector}) {",
+      "\t$0",
+      "}",
+    ],
+    "description": "For loop using iterator over vector"
+  },
+}

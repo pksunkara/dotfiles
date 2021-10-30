@@ -238,10 +238,10 @@
                   "name": "awscli"
                 },
                 {
-                  "name": "pip-autoremove"
+                  "name": "black"
                 },
                 {
-                  "name": "python3-pip-autoremove"
+                  "name": "pip-autoremove"
                 },
                 {
                   "name": "pipdeptree"
@@ -335,69 +335,6 @@
                 "yuanhjty.code-template-tool",
                 "yzhang.markdown-all-in-one",
                 "zenghongtu.vscode-asciiflow2"
-              ]
-            }
-          }
-        },
-        {
-          "name": "@dotsync/plugin-atom",
-          "version": "^0.8.0",
-          "data": {
-            "binary": "/usr/local/lib/brew/bin/apm",
-            "keymap": "atom/keymap.cson",
-            "snippets": "atom/snippets.cson",
-            "styles": "atom/styles.less",
-            "init": "atom/init.coffee",
-            "config": "atom/config.cson",
-            "_modules": {
-              "_uninstall": {
-                "packages": true
-              },
-              "packages": [
-                "Stylus",
-                "atom-ide-ui",
-                "atom-json-color",
-                "atom-material-syntax-dark",
-                "atom-material-ui",
-                "atom-wrap-in-tag",
-                "autoclose-html",
-                "autocomplete-modules",
-                "double-tag",
-                "expose",
-                "file-icons",
-                "git-plus",
-                "git-time-machine",
-                "highlight-selected",
-                "ide-rust",
-                "language-babel",
-                "language-bison-improved",
-                "language-cmake",
-                "language-diff",
-                "language-docker",
-                "language-ejs",
-                "language-fish-shell",
-                "language-graphql",
-                "language-kotlin",
-                "language-lex-flex-new",
-                "language-vue",
-                "linter",
-                "linter-eslint",
-                "linter-pylama",
-                "linter-stylelint",
-                "linter-tslint",
-                "minimap",
-                "minimap-autohider",
-                "minimap-bookmarks",
-                "minimap-find-and-replace",
-                "minimap-highlight-selected",
-                "minimap-selection",
-                "minimap-split-diff",
-                "pigments",
-                "project-manager",
-                "self-closing-tag",
-                "teletype",
-                "todo-show",
-                "toggle-quotes"
               ]
             }
           }

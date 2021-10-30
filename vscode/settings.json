@@ -1,34 +1,25 @@
 {
-  "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false,
+  "redhat.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "off",
   "window.zoomLevel": 0,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.iconTheme": "file-icons",
   "workbench.statusBar.visible": true,
-  "workbench.sideBar.location": "left",
-  "workbench.colorTheme": "Noctis Obscuro",
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.colorTheme": "Ayu Dark",
   "workbench.colorCustomizations": {
-    "activityBarBadge.background": "#E57373",
-    "list.activeSelectionForeground": "#E57373",
-    "list.inactiveSelectionForeground": "#E57373",
-    "list.highlightForeground": "#E57373",
-    "scrollbarSlider.activeBackground": "#E5737350",
-    "editorSuggestWidget.highlightForeground": "#E57373",
-    "textLink.foreground": "#E57373",
-    "progressBar.background": "#E57373",
-    "pickerGroup.foreground": "#E57373",
-    "tab.activeBorder": "#E57373",
-    "notificationLink.foreground": "#E57373",
-    "editorWidget.resizeBorder": "#E57373",
-    "editorWidget.border": "#E57373",
-    "settings.modifiedItemIndicator": "#E57373",
-    "settings.headerForeground": "#E57373",
-    "panelTitle.activeBorder": "#E57373",
-    "breadcrumb.activeSelectionForeground": "#E57373",
-    "menu.selectionForeground": "#E57373",
-    "menubar.selectionForeground": "#E57373",
-    "editor.findMatchBorder": "#E57373",
-    "selection.background": "#E5737340"
+    "[Solarized Dark]": {
+      "editorWhitespace.foreground": "#93A1A150",
+    },
+    "[Kimbie Dark+]": {
+      "editorWhitespace.foreground": "#A57A4C50",
+      "statusBar.background": "#362712",
+      "tab.inactiveBackground": "#131510",
+      "tab.activeBorder": "#5e3a1b",
+    }
   },
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
@@ -58,13 +49,21 @@
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingQuotes": "always",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.renameOnType": true,
+  "editor.linkedEditing": true,
   "editor.semanticHighlighting.enabled": true,
-  "editor.minimap.enabled": false,
   "editor.minimap.showSlider": "always",
+  "editor.stickyTabStops": true,
+  "editor.codeLensFontFamily": "Fantasque Sans Mono",
+  "editor.codeLensFontSize": 14,
+  "editor.semanticTokenColorCustomizations": {},
+  "editor.bracketPairColorization.enabled": true,
+  "security.workspace.trust.enabled": false,
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
   "task.quickOpen.skip": true,
-  "terminal.integrated.shell.linux": "/usr/bin/fish",
+  "git.autofetch": true,
   "auto-close-tag.fullMode": true,
+  "codesnap.transparentBackground": true,
+  "template-string-converter.autoRemoveTemplateString": true,
   "[c]": {
     "editor.formatOnSave": true
   },
@@ -77,7 +76,9 @@
   },
   "[html]": {
     "editor.tabSize": 2,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.tabSize": 2,
@@ -111,6 +112,12 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[vue]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
@@ -124,7 +131,8 @@
   },
   "[markdown]": {
     "editor.tabSize": 2,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[mdx]": {
     "editor.tabSize": 2,
@@ -134,29 +142,30 @@
   "[terraform]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[python]": {
     "editor.insertSpaces": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[php]": {
+    "editor.insertSpaces": true
+  },
+  "[ruby]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
   },
   "python.linting.pylintEnabled": false,
   "python.linting.pylamaEnabled": true,
   "python.linting.enabled": true,
+  "python.formatting.provider": "black",
   "markdown.extension.toc.orderedList": true,
   "rust-analyzer.procMacro.enable": true,
-  "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+  "rust-analyzer.lens.methodReferences": true,
   "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
   "rust-analyzer.debug.openDebugPane": true,
-  "terraform.indexing": {
-    "enabled": false,
-    "liveIndexing": false,
-    "delay": 500,
-    "exclude": [
-      ".terraform/**/*",
-      "**/.terraform/**/*"
-    ]
-  },
+  "rust-analyzer.cargo.runBuildScripts": true,
   "terraform.languageServer": {
     "external": true
   },
@@ -171,8 +180,8 @@
       "query": "state:open repo:${owner}/${repository} sort:created-desc"
     }
   ],
-  "git.autofetch": true,
-  "codesnap.transparentBackground": true,
+  "githubIssues.assignWhenWorking": false,
+  "githubIssues.createInsertFormat": "url",
   "highlight.regexes": {
     "(TODO:?)": {
       "regexFlags": "g",
@@ -202,5 +211,118 @@
     "~/Coding"
   ],
   "projects.configPath": "~/.vscode/projects.json",
-  "projects.inferGroups": true
+  "projects.inferGroups": true,
+  "module-templates.engine": "handlebars",
+  "module-templates.templates": {
+    "redux-slice": {
+      "displayName": "Redux slice",
+      "defaultPath": "src/slices",
+      "questions": {
+        "name": "Slice name?",
+      },
+      "files": [
+        {
+          "name": "{{camel name}}.ts",
+          "open": true,
+          "content": [
+            "import { createSlice, PayloadAction } from '@reduxjs/toolkit';",
+            "",
+            "import { RootState } from 'store';",
+            "",
+            "interface {{pascal name}}State {}",
+            "",
+            "export const {{camel name}}Slice = createSlice({",
+            "  name: '{{camel name}}',",
+            "  initialState: {} as {{pascal name}}State,",
+            "  reducers: {},",
+            "});",
+            "",
+            "export const {} = {{camel name}}Slice.actions;",
+            "",
+            "export default {{camel name}}Slice.reducer;",
+            ""
+          ]
+        }
+      ]
+    },
+    "react-component": {
+      "displayName": "React typescript component",
+      "defaultPath": "src/components",
+      "folder": "{{pascal name}}",
+      "questions": {
+        "name": "Component name?",
+        "children": [
+          {
+            "displayName": "Component has children",
+            "value": true
+          },
+          {
+            "displayName": "Component has no children",
+            "value": false
+          }
+        ]
+      },
+      "files": [
+        {
+          "name": "index.ts",
+          "content": [
+            "export { default } from './{{pascal name}}';",
+            ""
+          ]
+        },
+        {
+          "name": "{{pascal name}}.tsx",
+          "open": true,
+          "content": [
+            "import React from 'react';",
+            "",
+            "import { Container } from './{{pascal name}}.styles';",
+            "",
+            "export interface {{pascal name}}Props extends React.HTMLAttributes<HTMLDivElement> {}",
+            "",
+            "const {{pascal name}}: React.FC<{{pascal name}}Props> = ({ {{#if children}}children, {{/if}}...props }) => {",
+            "  return <Container {...props}>{{#if children}}{children}{{/if}}</Container>;",
+            "};",
+            "",
+            "export default {{pascal name}};",
+            ""
+          ]
+        },
+        {
+          "name": "{{pascal name}}.styles.ts",
+          "open": true,
+          "content": [
+            "import styled from 'styled-components';",
+            "",
+            "import { {{pascal name}}Props } from './{{pascal name}}';",
+            "",
+            "export const Container = styled.div<{{pascal name}}Props>``;",
+            ""
+          ]
+        },
+        {
+          "name": "{{pascal name}}.stories.tsx",
+          "open": true,
+          "content": [
+            "import { Meta } from '@storybook/react';",
+            "",
+            "import {{pascal name}} from './{{pascal name}}';",
+            "",
+            "export default {",
+            "  title: '{{pascal name}}',",
+            "  component: {{pascal name}},",
+            "  argTypes: {},",
+            "} as Meta;",
+            "",
+            "export const Default = {",
+            "  args: {",
+            "    {{#if children}}children: 'Children'{{/if}}",
+            "  }",
+            "};",
+            ""
+          ]
+        }
+      ]
+    }
+  }
 }
