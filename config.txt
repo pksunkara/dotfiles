@@ -1,0 +1,72 @@
+pacman during installation:
+	netctl, dhcpcd, base, linux, linux-firmware, amd-ucode, efibootmgr, grub, nvidia, nvidia-settings
+run:
+	nvidia-xconfig
+user to be added:
+copy ssh key:
+pacman:
+	xorg-xinit, xorg-server, xorg-xrandr
+	binutils, make, which, pkgconf, fakeroot, gcc, git, sudo, man-db, patch, whois
+	alsa-utils, iwd, openssh, openssl
+	fish, fzf, neovim, tmux, htop
+	bat, dua-cli, eza, fd, ripgrep, jaq, difftastic
+	docker, docker-compose, docker-buildx
+	alacritty, darkman, i3-wm, pacman-contrib, nix
+	github-cli, mutt
+	noto-fonts, noto-fonts-extra, noto-fonts-emoji, noto-fonts-cjk, ttf-fantasque-sans-mono, otf-firamono-nerd
+	tealdeer, sad, hexyl, pastel, tokei, hyperfine, zola, bandwhich, impala
+	git-delta, git-absorb, radicle-bin
+	dive
+	libpqxx
+	rustup, rust-analyzer, mold
+	python, uv
+	nodejs-lts-iron, npm, pnpm
+	go, gopls
+	stylua
+	protobuf, buf
+	kubectl, k9s, helm
+	gnome-keyring, perl-authen-sasl, perl-io-socket-ssl
+	rofi, polybar
+	7zip, unzip,
+	aws-cli, asciinema
+	ollama
+rust:
+	install stable
+install paru:
+paru:
+	superfile-bin
+	dotsync, publisher, enquirer, plotter, crude
+	git-interactive-rebase-tool-bin, git-trim-bin
+	lazydocker-bin, docker-slim-bin
+	google-chrome, visual-studio-code-bin, github-desktop-bin
+	ods-bin
+	supabase-bin, ngrok, devbox-bin, kraftkit-bin, lefthook-bin
+user to be modified:
+	add to sudoers file (ex: pksunkara ALL=(ALL) NOPASSWD: ALL)
+	add to docker, nix-users groups (ex: usermod -aG docker pksunkara)
+	set fish as default shell (change shell)
+systemctl enable:
+	sshd, docker, systemd-timesyncd, iwd
+systemctl --user enable:
+	ssh-agent, darkman, radicle-node
+configs:
+	.xinitrc, .Xresources (maybe remove?)
+links:
+	alacritty, fish, git, i3, mutt, nvim, paru, polybar, rofi, tmux
+	vscode/ settings.json, keybindings.json, snippets
+nix:
+	# ln -s /nix/var/nix/profiles ~/.local/state/nix/profiles
+	sudo chown -R pksunkara /nix
+nix profile:
+	nixpkgs#devenv
+npm:
+	lerna-update-wizard, svg-term-cli, @withgraphite/graphite-cli
+cargo:
+	cargo-expand, cargo-llvm-cov, cargo-workspaces, cargo-bloat, cargo-modules, cargo-machete, cargo-outdated
+gh-extensions:
+	mislav/gh-branch, dlvhdr/gh-dash
+TODO:
+	plymouth, grub theme, greeter
+secrets:
+	~/.aws/credentials, ~/.terraform.d/credentials.*, ~/.supabase/access-token, ~/.config/ngrok/ngrok.yml,
+	~/.graphite_user_config, ~/.config/user.fish
