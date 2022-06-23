@@ -1,6 +1,6 @@
 {
   "telemetry.telemetryLevel": "off",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 2,
   "window.commandCenter": false,
   "window.autoDetectColorScheme": true,
   "workbench.layoutControl.enabled": false,
@@ -11,7 +11,7 @@
   "workbench.productIconTheme": "fluent-icons",
   "workbench.editor.empty.hint": "hidden",
   "workbench.preferredDarkColorTheme": "Catppuccin Mocha Darker Bordered",
-  "workbench.preferredLightColorTheme": "Bearded Theme Coffee Cream",
+  "workbench.preferredLightColorTheme": "Catppuccin Mocha Darker Bordered",
   "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha Darker Bordered",
   "workbench.preferredHighContrastLightColorTheme": "Bearded Theme Coffee Cream",
   "workbench.colorCustomizations": {

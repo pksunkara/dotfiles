@@ -26,3 +26,12 @@ style  = "Italic"
 [font.normal]
 family = "FiraMono Nerd Font"
 style  = "Regular"
+
+[font.glyph_offset]
+y = 3
+
+[font.offset]
+y = 6
+
+[window.padding]
+x = 5
