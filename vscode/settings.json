@@ -1,6 +1,6 @@
 {
   "telemetry.telemetryLevel": "off",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 2,
   "window.commandCenter": false,
   "window.autoDetectColorScheme": true,
   "workbench.layoutControl.enabled": false,
