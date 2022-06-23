@@ -1,6 +1,6 @@
 {
   "telemetry.telemetryLevel": "off",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 2,
   "window.commandCenter": false,
   "window.autoDetectColorScheme": true,
   "workbench.layoutControl.enabled": false,
@@ -12,7 +12,7 @@
   "workbench.editor.empty.hint": "hidden",
   "workbench.colorTheme": "Catppuccin Mocha Darker Bordered",
   "workbench.preferredDarkColorTheme": "Bearded Theme feat. Gold D Raynh",
-  "workbench.preferredLightColorTheme": "Bearded Theme Coffee Cream",
+  "workbench.preferredLightColorTheme": "Catppuccin Mocha Darker Bordered",
   "workbench.preferredHighContrastColorTheme": "Bearded Theme feat. Gold D Raynh",
   "workbench.preferredHighContrastLightColorTheme": "Bearded Theme Coffee Cream",
   "workbench.colorCustomizations": {
