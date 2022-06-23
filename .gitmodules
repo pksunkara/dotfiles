@@ -16,6 +16,9 @@
 [submodule "fish/bundle/fish-getopts"]
 	path = fish/bundle/fish-getopts
 	url = https://github.com/jorgebucaran/getopts.fish
+[submodule "fish/bundle/fish-ssh-agent"]
+	path = fish/bundle/fish-ssh-agent
+	url = https://github.com/danhper/fish-ssh-agent
 [submodule "nvim/pack/bundle/start/nvim-web-devicons"]
 	path = nvim/pack/bundle/start/nvim-web-devicons
 	url = https://github.com/kyazdani42/nvim-web-devicons

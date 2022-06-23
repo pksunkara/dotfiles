@@ -1,6 +1,6 @@
 {
   "telemetry.telemetryLevel": "off",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 2,
   "window.commandCenter": false,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.enableStickyScroll": true,
@@ -10,7 +10,7 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Bearded Theme feat. Gold D Raynh",
   "workbench.colorCustomizations": {
     "[Solarized Dark]": {
       "editorWhitespace.foreground": "#93A1A150",

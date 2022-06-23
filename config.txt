@@ -1,0 +1,58 @@
+pacman during installation:
+	netctl, dhcpcd, base, linux, linux-firmware, amd-ucode, efibootmgr, grub, nvidia, nvidia-settings
+run:
+	nvidia-xconfig
+user to be added:
+copy ssh key:
+pacman:
+	xorg-xinit, xorg-server, xorg-xrandr
+	binutils, make, which, pkgconf, fakeroot, gcc, git, git-lfs, sudo, man-db, patch, whois
+	alsa-utils
+	fish, fzf, neovim, openssh, tmux, htop, jq, openssl
+	bat, eza, procs, fd, hexyl, pastel, tokei, hyperfine, zola, tealdeer, ripgrep, bandwhich, dog
+	alacritty, docker, docker-compose, docker-buildx, github-cli, i3-wm, mutt
+	ttf-fantasque-sans-mono, noto-fonts, otf-firamono-nerd
+	pacman-contrib
+	nix
+	git-delta, git-absorb, dive
+	rustup, mold
+	python, python-poetry, python-black, python-prospector?
+	nodejs-lts-hydrogen, npm, pnpm
+	go, gopls
+	ollama
+	protobuf
+	terraform, kubectl, helm, aws-cli
+	gnome-keyring, perl-authen-sasl, perl-io-socket-ssl
+	rofi
+	p7zip, unzip,
+	asciinema
+rust:
+	install stable
+install paru:
+paru:
+	dotsync, publisher, enquirer, plotter, crude
+	git-interactive-rebase-tool-bin, git-trim-bin, lazydocker-bin
+	google-chrome, visual-studio-code-bin, github-desktop-bin
+	supabase-bin, ngrok, buf-bin, devbox-bin
+user to be modified:
+	add to sudoers file (ex: pksunkara ALL=(ALL) NOPASSWD: ALL)
+	add to docker, nix-user groups (ex: usermod -aG docker pksunkara)
+	set fish as default shell (change shell)
+systemctl enable:
+	sshd, docker, systemd-timesyncd, nix-daemon
+configs:
+	.xinitrc, .Xresources (maybe remove?)
+nix:
+	nix-channel --add https://nixos.org/channels/nixos-22.11 nixpkgs
+	nix-channel --update
+npm:
+	lerna-update-wizard, svg-term-cli, @withgraphite/graphite-cli
+cargo:
+	cargo-info, cargo-expand, cargo-llvm-cov, cargo-workspaces, cargo-bloat, cargo-modules, cargo-machete
+gh-extensions:
+	seachicken/gh-poi, heaths/gh-label, mislav/gh-branch, dlvhdr/gh-dash
+TODO:
+	polybar, ssh-agent,  plymouth, grub theme, greeter
+secrets:
+	~/.aws/credentials, ~/.terraform.d/credentials.*, ~/.supabase/access-token, ~/.config/ngrok/ngrok.yml,
+	~/.graphite_user_config, ~/.config/user.fish
