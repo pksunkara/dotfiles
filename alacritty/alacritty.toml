@@ -1,0 +1,28 @@
+[font]
+size = 13
+
+[font.bold]
+family = "FuraMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "FuraMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "FuraMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FuraMono Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command"
