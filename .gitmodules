@@ -1,63 +1,3 @@
-[submodule "vim/bundle/vim-javascript"]
-	path = vim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
-[submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "vim/bundle/vim-commentary"]
-	path = vim/bundle/vim-commentary
-	url = https://github.com/tpope/vim-commentary
-[submodule "vim/bundle/vim-node.js"]
-	path = vim/bundle/vim-node.js
-	url = https://github.com/mmalecki/vim-node.js
-[submodule "vim/bundle/vim-json"]
-	path = vim/bundle/vim-json
-	url = https://github.com/leshill/vim-json
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
-[submodule "vim/bundle/vim-css3-syntax"]
-	path = vim/bundle/vim-css3-syntax
-	url = https://github.com/hail2u/vim-css3-syntax
-[submodule "vim/bundle/vim-less"]
-	path = vim/bundle/vim-less
-	url = https://github.com/groenewege/vim-less
-[submodule "vim/bundle/vim-markdown"]
-	path = vim/bundle/vim-markdown
-	url = https://github.com/tpope/vim-markdown
-[submodule "vim/bundle/simple-pairs"]
-	path = vim/bundle/simple-pairs
-	url = https://github.com/vim-scripts/simple-pairs
-[submodule "vim/bundle/vim-gitgutter"]
-	path = vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/bundle/vim-multiple-cursors"]
-	path = vim/bundle/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors
-[submodule "vim/bundle/ultisnips"]
-	path = vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips
-[submodule "vim/bundle/vim-bufferline"]
-	path = vim/bundle/vim-bufferline
-	url = https://github.com/bling/vim-bufferline
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
-[submodule "vim/bundle/ctrlp-funky"]
-	path = vim/bundle/ctrlp-funky
-	url = https://github.com/tacahiroy/ctrlp-funky
-[submodule "vim/bundle/gundo"]
-	path = vim/bundle/gundo
-	url = https://github.com/sjl/gundo.vim
-[submodule "vim/bundle/vim-pathogen"]
-	path = vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
-[submodule "vim/bundle/vim-airline-themes"]
-	path = vim/bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "fish/bundle/fishnet"]
 	path = fish/bundle/fishnet
 	url = https://github.com/pksunkara/fishnet
@@ -70,27 +10,99 @@
 [submodule "git"]
 	path = git
 	url = https://gist.github.com/988716.git
-[submodule "vim/bundle/vim-fish"]
-	path = vim/bundle/vim-fish
-	url = https://github.com/dag/vim-fish
-[submodule "vim/bundle/vim-devicons"]
-	path = vim/bundle/vim-devicons
-	url = https://github.com/ryanoasis/vim-devicons
-[submodule "vim/bundle/ctrlp.vim"]
-	path = vim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim
-[submodule "vim/bundle/typescript-vim"]
-	path = vim/bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim
-[submodule "vim/bundle/vim-vue"]
-	path = vim/bundle/vim-vue
-	url = https://github.com/posva/vim-vue
 [submodule "fish/bundle/bass"]
 	path = fish/bundle/bass
 	url = https://github.com/edc/bass
-[submodule "vim/bundle/vim-toml"]
-	path = vim/bundle/vim-toml
-	url = https://github.com/cespare/vim-toml
 [submodule "fish/bundle/fish-getopts"]
 	path = fish/bundle/fish-getopts
 	url = https://github.com/jorgebucaran/getopts.fish
+[submodule "nvim/pack/bundle/start/nvim-web-devicons"]
+	path = nvim/pack/bundle/start/nvim-web-devicons
+	url = https://github.com/kyazdani42/nvim-web-devicons
+[submodule "nvim/pack/bundle/start/nvim-tree.lua"]
+	path = nvim/pack/bundle/start/nvim-tree.lua
+	url = https://github.com/kyazdani42/nvim-tree.lua
+[submodule "nvim/pack/bundle/start/plenary.nvim"]
+	path = nvim/pack/bundle/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "nvim/pack/bundle/start/telescope.nvim"]
+	path = nvim/pack/bundle/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+[submodule "nvim/pack/bundle/start/heirline.nvim"]
+	path = nvim/pack/bundle/start/heirline.nvim
+	url = https://github.com/rebelot/heirline.nvim
+[submodule "nvim/pack/bundle/start/which-key.nvim"]
+	path = nvim/pack/bundle/start/which-key.nvim
+	url = https://github.com/folke/which-key.nvim
+[submodule "nvim/pack/bundle/start/legendary.nvim"]
+	path = nvim/pack/bundle/start/legendary.nvim
+	url = https://github.com/mrjones2014/legendary.nvim
+[submodule "nvim/pack/bundle/start/dressing.nvim"]
+	path = nvim/pack/bundle/start/dressing.nvim
+	url = https://github.com/stevearc/dressing.nvim
+[submodule "nvim/pack/bundle/start/gitsigns.nvim"]
+	path = nvim/pack/bundle/start/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim
+[submodule "nvim/pack/bundle/start/mini.nvim"]
+	path = nvim/pack/bundle/start/mini.nvim
+	url = https://github.com/echasnovski/mini.nvim
+[submodule "nvim/pack/bundle/start/relative-toggle.nvim"]
+	path = nvim/pack/bundle/start/relative-toggle.nvim
+	url = https://github.com/cpea2506/relative-toggle.nvim
+[submodule "nvim/pack/themes/start/tokyonight.nvim"]
+	path = nvim/pack/themes/start/tokyonight.nvim
+	url = https://github.com/folke/tokyonight.nvim
+[submodule "nvim/pack/themes/start/noctis.nvim"]
+	path = nvim/pack/themes/start/noctis.nvim
+	url = https://github.com/talha-akram/noctis.nvim
+[submodule "nvim/pack/themes/start/catppuccin.nvim"]
+	path = nvim/pack/themes/start/catppuccin.nvim
+	url = https://github.com/catppuccin/nvim
+[submodule "nvim/pack/themes/start/kanagawa.nvim"]
+	path = nvim/pack/themes/start/kanagawa.nvim
+	url = https://github.com/rebelot/kanagawa.nvim
+[submodule "nvim/pack/themes/start/rose-pine.nvim"]
+	path = nvim/pack/themes/start/rose-pine.nvim
+	url = https://github.com/rose-pine/neovim
+[submodule "nvim/pack/themes/start/nightfox.nvim"]
+	path = nvim/pack/themes/start/nightfox.nvim
+	url = https://github.com/EdenEast/nightfox.nvim
+[submodule "nvim/pack/themes/start/onedark.nvim"]
+	path = nvim/pack/themes/start/onedark.nvim
+	url = https://github.com/navarasu/onedark.nvim
+[submodule "nvim/pack/themes/start/everforest"]
+	path = nvim/pack/themes/start/everforest
+	url = https://github.com/sainnhe/everforest
+[submodule "nvim/pack/themes/start/oxocarbon.nvim"]
+	path = nvim/pack/themes/start/oxocarbon.nvim
+	url = https://github.com/nyoom-engineering/oxocarbon.nvim
+[submodule "nvim/pack/themes/start/material.nvim"]
+	path = nvim/pack/themes/start/material.nvim
+	url = https://github.com/marko-cerovac/material.nvim
+[submodule "nvim/pack/themes/start/solarized-osaka.nvim"]
+	path = nvim/pack/themes/start/solarized-osaka.nvim
+	url = https://github.com/craftzdog/solarized-osaka.nvim
+[submodule "nvim/pack/themes/start/vim-moonfly-colors"]
+	path = nvim/pack/themes/start/vim-moonfly-colors
+	url = https://github.com/bluz71/vim-moonfly-colors
+[submodule "nvim/pack/bundle/start/nvim-window-picker"]
+	path = nvim/pack/bundle/start/nvim-window-picker
+	url = https://github.com/s1n7ax/nvim-window-picker
+[submodule "nvim/pack/bundle/start/telescope-undo.nvim"]
+	path = nvim/pack/bundle/start/telescope-undo.nvim
+	url = https://github.com/debugloop/telescope-undo.nvim
+[submodule "nvim/pack/bundle/start/telescope-tabs"]
+	path = nvim/pack/bundle/start/telescope-tabs
+	url = https://github.com/LukasPietzschmann/telescope-tabs
+[submodule "nvim/pack/bundle/start/ultimate-autopair.nvim"]
+	path = nvim/pack/bundle/start/ultimate-autopair.nvim
+	url = https://github.com/altermo/ultimate-autopair.nvim
+[submodule "nvim/pack/bundle/start/diffview.nvim"]
+	path = nvim/pack/bundle/start/diffview.nvim
+	url = https://github.com/sindrets/diffview.nvim
+[submodule "nvim/pack/bundle/start/neogit"]
+	path = nvim/pack/bundle/start/neogit
+	url = https://github.com/NeogitOrg/neogit
+[submodule "nvim/pack/bundle/start/nvim-surround"]
+	path = nvim/pack/bundle/start/nvim-surround
+	url = https://github.com/kylechui/nvim-surround

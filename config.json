@@ -19,12 +19,8 @@
           "data": {
             "paths": [
               {
-                "source": "vim",
-                "destination": "/Users/pksunkara/.vim"
-              },
-              {
-                "source": "vim/vimrc",
-                "destination": "/Users/pksunkara/.vimrc"
+                "source": "nvim",
+                "destination": "/Users/pksunkara/.config/nvim"
               },
               {
                 "source": "fish",
