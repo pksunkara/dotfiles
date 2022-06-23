@@ -1,0 +1,21 @@
+font:
+  normal:
+    family: FuraMono Nerd Font
+    style: Regular
+  bold:
+    family: FuraMono Nerd Font
+    style: Bold
+  italic:
+    family: FuraMono Nerd Font
+    style: Italic
+  bold_italic:
+    family: FuraMono Nerd Font
+    style: Bold Italic
+  size: 13
+key_bindings:
+  - key: V
+    mods: Command
+    action: Paste
+  - key: C
+    mods: Command
+    action: Copy

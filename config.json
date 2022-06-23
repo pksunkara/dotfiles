@@ -19,12 +19,8 @@
           "data": {
             "paths": [
               {
-                "source": "vim",
-                "destination": "/Users/pksunkara/.vim"
-              },
-              {
-                "source": "vim/vimrc",
-                "destination": "/Users/pksunkara/.vimrc"
+                "source": "nvim",
+                "destination": "/Users/pksunkara/.config/nvim"
               },
               {
                 "source": "fish",
@@ -206,13 +202,7 @@
             "_modules": {
               "packages": [
                 {
-                  "name": "@vue/cli"
-                },
-                {
                   "name": "lerna-update-wizard"
-                },
-                {
-                  "name": "npm-check"
                 },
                 {
                   "name": "svg-term-cli"
@@ -250,7 +240,7 @@
                   "name": "poetry"
                 },
                 {
-                  "name": "pylama"
+                  "name": "prospector"
                 }
               ]
             }
