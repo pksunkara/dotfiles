@@ -15,14 +15,14 @@
     "[Solarized Dark]": {
       "editorWhitespace.foreground": "#93A1A150",
       "editorInlayHint.foreground": "#A0A0A0F0",
-      "editorInlayHint.background": "#00000000",
+      "editorInlayHint.background": "#00000000"
     },
     "[Kimbie Dark+]": {
       "editorWhitespace.foreground": "#A57A4C50",
       "editorInlayHint.background": "#00000000",
       "statusBar.background": "#362712",
       "tab.inactiveBackground": "#131510",
-      "tab.activeBorder": "#5e3a1b",
+      "tab.activeBorder": "#5e3a1b"
     }
   },
   "explorer.confirmDragAndDrop": false,
@@ -149,7 +149,7 @@
   "[terraform]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[python]": {
     "editor.insertSpaces": true,
@@ -189,9 +189,6 @@
   "rust-analyzer.lens.references.enumVariant.enable": true,
   "rust-analyzer.lens.references.method.enable": true,
   "rust-analyzer.lens.references.trait.enable": true,
-  "terraform.languageServer": {
-    "external": true
-  },
   "go.useLanguageServer": true,
   "githubIssues.queries": [
     {
@@ -213,7 +210,7 @@
           "color": "#ffffff",
           "backgroundColor": "#ffbd2a",
           "overviewRulerColor": "rgba(255, 189, 42, 0.8)"
-        },
+        }
       ]
     },
     "(FIXME:?)": {
@@ -241,7 +238,7 @@
       "displayName": "Redux slice",
       "defaultPath": "src/slices",
       "questions": {
-        "name": "Slice name?",
+        "name": "Slice name?"
       },
       "files": [
         {
@@ -254,9 +251,11 @@
             "",
             "interface {{pascal name}}State {}",
             "",
+            "const initialState: {{pascal name}}State = {};",
+            "",
             "export const {{camel name}}Slice = createSlice({",
             "  name: '{{camel name}}',",
-            "  initialState: {} as {{pascal name}}State,",
+            "  initialState,",
             "  reducers: {},",
             "});",
             "",
@@ -290,6 +289,17 @@
           "name": "index.ts",
           "content": [
             "export { default } from './{{pascal name}}';",
+            "export * from './types';",
+            ""
+          ]
+        },
+        {
+          "name": "types.ts",
+          "open": true,
+          "content": [
+            "import { HTMLAttributes } from 'react';",
+            "",
+            "export interface {{pascal name}}Props extends HTMLAttributes<HTMLDivElement> {}",
             ""
           ]
         },
@@ -299,9 +309,9 @@
           "content": [
             "import React from 'react';",
             "",
-            "import { Container } from './{{pascal name}}.styles';",
+            "import { {{pascal name}}Props } from './types';",
             "",
-            "export interface {{pascal name}}Props extends React.HTMLAttributes<HTMLDivElement> {}",
+            "import { Container } from './{{pascal name}}.styles';",
             "",
             "const {{pascal name}}: React.FC<{{pascal name}}Props> = ({ {{#if children}}children, {{/if}}...props }) => {",
             "  return <Container {...props}>{{#if children}}{children}{{/if}}</Container>;",
@@ -315,9 +325,9 @@
           "name": "{{pascal name}}.styles.ts",
           "open": true,
           "content": [
-            "import styled from 'styled-components';",
+            "import styled from 'styled-components/macro';",
             "",
-            "import { {{pascal name}}Props } from './{{pascal name}}';",
+            "import { {{pascal name}}Props } from './types';",
             "",
             "export const Container = styled.div<{{pascal name}}Props>``;",
             ""
@@ -327,21 +337,21 @@
           "name": "{{pascal name}}.stories.tsx",
           "open": true,
           "content": [
-            "import { Meta } from '@storybook/react';",
+            "import { Meta, Story } from '@storybook/react';",
             "",
             "import {{pascal name}} from './{{pascal name}}';",
+            "import { {{pascal name}}Props } from './types';",
             "",
             "export default {",
             "  title: '{{pascal name}}',",
             "  component: {{pascal name}},",
-            "  argTypes: {},",
-            "} as Meta;",
-            "",
-            "export const Default = {",
             "  args: {",
-            "    {{#if children}}children: 'Children'{{/if}}",
-            "  }",
-            "};",
+            "{{#if children}}    children: 'Children',{{/if}}",
+            "  },",
+            "  argTypes: {},",
+            "} as Meta<{{pascal name}}Props>;",
+            "",
+            "export const Default: Story<{{pascal name}}Props> = {};",
             ""
           ]
         }
