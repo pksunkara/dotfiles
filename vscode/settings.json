@@ -17,6 +17,15 @@
       "editorInlayHint.foreground": "#A0A0A0F0",
       "editorInlayHint.background": "#00000000"
     },
+    "[Solarized Light]": {
+      "editorWhitespace.foreground": "#93A1A150",
+      "editorInlayHint.foreground": "#A0A0A0F0",
+      "editorInlayHint.background": "#00000000"
+    },
+    "[Night Owl (No Italics)]": {
+      "editorInlayHint.foreground": "#A0A0A0F0",
+      "editorInlayHint.background": "#00000000"
+    },
     "[Kimbie Dark+]": {
       "editorWhitespace.foreground": "#A57A4C50",
       "editorInlayHint.background": "#00000000",
@@ -81,6 +90,12 @@
     "editor.insertSpaces": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[graphql]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[html]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
@@ -91,19 +106,46 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[lua]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
+  },
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[php]": {
+    "editor.insertSpaces": true
+  },
+  "[ruby]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
   },
   "[rust]": {
     "editor.insertSpaces": true,
@@ -112,6 +154,11 @@
   "[sql]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true
+  },
+  "[terraform]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
   },
   "[typescript]": {
     "editor.tabSize": 2,
@@ -136,33 +183,6 @@
     "editor.insertSpaces": true,
     "editor.formatOnSave": true
   },
-  "[markdown]": {
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[mdx]": {
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "editor.formatOnSave": true
-  },
-  "[terraform]": {
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "editor.formatOnSave": true
-  },
-  "[python]": {
-    "editor.insertSpaces": true,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.python"
-  },
-  "[php]": {
-    "editor.insertSpaces": true
-  },
-  "[ruby]": {
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true
-  },
   "javascript.inlayHints.enumMemberValues.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
@@ -175,8 +195,8 @@
   "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
   "typescript.inlayHints.variableTypes.enabled": true,
-  "python.linting.prospectorEnabled": true,
   "python.linting.enabled": true,
+  "python.linting.prospectorEnabled": true,
   "python.formatting.provider": "black",
   "markdown.extension.toc.orderedList": true,
   "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
@@ -190,6 +210,14 @@
   "rust-analyzer.lens.references.method.enable": true,
   "rust-analyzer.lens.references.trait.enable": true,
   "go.useLanguageServer": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "json": false,
+    "jsonc": false,
+    "markdown": false,
+    "plaintext": false
+  },
   "githubIssues.queries": [
     {
       "label": "My Issues",
@@ -227,9 +255,7 @@
   "projects.checkDirty": true,
   "projects.checkPaths": true,
   "projects.statusbarPriority": 0,
-  "projects.refreshRoots": [
-    "~/Coding"
-  ],
+  "projects.refreshRoots": ["~/Coding"],
   "projects.configPath": "~/.vscode/projects.json",
   "projects.inferGroups": true,
   "module-templates.engine": "handlebars",
@@ -352,6 +378,23 @@
             "} as Meta<{{pascal name}}Props>;",
             "",
             "export const Default: Story<{{pascal name}}Props> = {};",
+            ""
+          ]
+        },
+        {
+          "name": "{{pascal name}}.test.tsx",
+          "open": true,
+          "content": [
+            "import React from 'react';",
+            "import userEvent from '@testing-library/user-event';",
+            "",
+            "import { render, screen } from 'tests';",
+            "",
+            "import {{pascal name}} from './{{pascal name}}';",
+            "",
+            "test('interaction', async () => {",
+            "  render(<{{pascal name}}{{#if children}}>Children</{{pascal name}}>{{else}} />{{/if}});",
+            "});",
             ""
           ]
         }
