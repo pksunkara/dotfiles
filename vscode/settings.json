@@ -76,9 +76,6 @@
   "task.quickOpen.skip": true,
   "git.autofetch": true,
   "git.ignoreRebaseWarning": true,
-  "auto-close-tag.fullMode": true,
-  "codesnap.transparentBackground": true,
-  "template-string-converter.autoRemoveTemplateString": true,
   "[c]": {
     "editor.formatOnSave": true
   },
@@ -160,6 +157,12 @@
     "editor.insertSpaces": true,
     "editor.formatOnSave": true
   },
+  "[toml]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
   "[typescript]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
@@ -183,6 +186,32 @@
     "editor.insertSpaces": true,
     "editor.formatOnSave": true
   },
+  "auto-close-tag.fullMode": true,
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascriptreact",
+    "typescriptreact",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (Eex)"
+  ],
+  "codesnap.transparentBackground": true,
+  "evenBetterToml.formatter.allowedBlankLines": 1,
+  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.arrayAutoCollapse": true,
+  "evenBetterToml.formatter.arrayTrailingComma": true,
+  "evenBetterToml.formatter.indentTables": true,
+  "evenBetterToml.formatter.reorderKeys": true,
+  "evenBetterToml.formatter.reorderArrays": true,
+  "template-string-converter.autoRemoveTemplateString": true,
   "javascript.inlayHints.enumMemberValues.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
