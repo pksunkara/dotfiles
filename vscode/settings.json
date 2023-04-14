@@ -259,6 +259,7 @@
   ],
   "githubIssues.assignWhenWorking": false,
   "githubIssues.createInsertFormat": "url",
+  "githubPullRequests.pullBranch": "never",
   "highlight.regexes": {
     "(TODO:?)": {
       "regexFlags": "g",
@@ -352,9 +353,11 @@
           "name": "types.ts",
           "open": true,
           "content": [
-            "import { HTMLAttributes } from 'react';",
+            "import { HTMLAttributes{{#if children}}, ReactNode{{/if}} } from 'react';",
             "",
-            "export interface {{pascal name}}Props extends HTMLAttributes<HTMLDivElement> {}",
+            "export interface {{pascal name}}Props extends HTMLAttributes<HTMLDivElement> {",
+            "{{#if children}}  children: ReactNode,{{/if}}",
+            "}",
             ""
           ]
         },
