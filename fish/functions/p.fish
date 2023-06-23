@@ -1,5 +1,5 @@
 function __projects_list
-	find ~/Coding -type d -maxdepth 2 -depth 2 -print
+	find ~/Coding -maxdepth 2 -mindepth 2 -type d
 end
 
 function p -d "Project Manager"

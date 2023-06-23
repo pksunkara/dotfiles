@@ -93,6 +93,12 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[handlebars]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[html]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
@@ -208,7 +214,7 @@
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.arrayAutoCollapse": true,
   "evenBetterToml.formatter.arrayTrailingComma": true,
-  "evenBetterToml.formatter.indentTables": true,
+  "evenBetterToml.formatter.columnWidth": 120,
   "evenBetterToml.formatter.reorderKeys": true,
   "evenBetterToml.formatter.reorderArrays": true,
   "template-string-converter.autoRemoveTemplateString": true,
@@ -239,6 +245,12 @@
   "rust-analyzer.lens.references.method.enable": true,
   "rust-analyzer.lens.references.trait.enable": true,
   "go.useLanguageServer": true,
+  "Lua.diagnostics.globals": ["vim"],
+  "Lua.format.defaultConfig": {
+    "trailing_table_separator": "smart"
+  },
+  "Lua.hint.enable": true,
+  "Lua.hint.setType": true,
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
@@ -424,7 +436,7 @@
             "",
             "import {{pascal name}} from './{{pascal name}}';",
             "",
-            "test('interaction', async () => {",
+            "test('renders', async () => {",
             "  render(<{{pascal name}}{{#if children}}>Children</{{pascal name}}>{{else}} />{{/if}});",
             "});",
             ""

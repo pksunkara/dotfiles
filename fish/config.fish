@@ -1,6 +1,5 @@
 set fish_greeting
 
-alias cofe="./node_modules/.bin/coffee -c -o lib src"
 alias cat="bat"
 alias ls="exa"
 

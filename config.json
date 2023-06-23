@@ -309,7 +309,7 @@
                 "leizongmin.node-module-intellisense",
                 "liviuschera.noctis",
                 "mark-hansen.hledger-vscode",
-                "matklad.rust-analyzer",
+                "rust-lang.rust-analyzer",
                 "mechatroner.rainbow-csv",
                 "meganrogge.template-string-converter",
                 "mgmcdermott.vscode-language-babel",

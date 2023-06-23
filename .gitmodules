@@ -60,16 +60,16 @@
 	url = git://github.com/vim-airline/vim-airline-themes
 [submodule "fish/bundle/fishnet"]
 	path = fish/bundle/fishnet
-	url = git://github.com/pksunkara/fishnet
+	url = https://github.com/pksunkara/fishnet
 [submodule "fish/bundle/pisces"]
 	path = fish/bundle/pisces
-	url = git://github.com/laughedelic/pisces
+	url = https://github.com/laughedelic/pisces
 [submodule "fish/bundle/fish-fastdir"]
 	path = fish/bundle/fish-fastdir
-	url = git://github.com/tuvistavie/fish-fastdir
+	url = https://github.com/tuvistavie/fish-fastdir
 [submodule "git"]
 	path = git
-	url = git://gist.github.com/988716.git
+	url = https://gist.github.com/988716.git
 [submodule "vim/bundle/vim-fish"]
 	path = vim/bundle/vim-fish
 	url = git://github.com/dag/vim-fish
@@ -87,10 +87,10 @@
 	url = git://github.com/posva/vim-vue
 [submodule "fish/bundle/bass"]
 	path = fish/bundle/bass
-	url = git://github.com/edc/bass
+	url = https://github.com/edc/bass
 [submodule "vim/bundle/vim-toml"]
 	path = vim/bundle/vim-toml
 	url = git://github.com/cespare/vim-toml
 [submodule "fish/bundle/fish-getopts"]
 	path = fish/bundle/fish-getopts
-	url = git://github.com/jorgebucaran/getopts.fish
+	url = https://github.com/jorgebucaran/getopts.fish

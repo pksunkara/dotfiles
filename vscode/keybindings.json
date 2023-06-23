@@ -135,11 +135,11 @@
   },
   {
     "key": "shift+cmd+f",
-    "command": "-workbench.view.search",
+    "command": "-workbench.view.search"
   },
   {
     "key": "alt+f",
-    "command": "workbench.view.search",
+    "command": "workbench.view.search"
   },
   {
     "key": "ctrl+shift+g",
