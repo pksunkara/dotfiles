@@ -1,11 +1,10 @@
 {
-  "redhat.telemetry.enabled": false,
   "telemetry.telemetryLevel": "off",
   "window.zoomLevel": 0,
+  "window.commandCenter": false,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.iconTheme": "file-icons",
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.statusBar.visible": true,
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
@@ -25,6 +24,12 @@
     "[Night Owl (No Italics)]": {
       "editorInlayHint.foreground": "#A0A0A0F0",
       "editorInlayHint.background": "#00000000"
+    },
+    "[Bearded Theme feat. Gold D Raynh]": {
+      "editorInlayHint.foreground": "#A0A0A0F0",
+      "editorInlayHint.background": "#00000000",
+      "editorInlayHint.typeForeground": "#A0A0A0F0",
+      "editorInlayHint.typeBackground": "#00000000"
     },
     "[Kimbie Dark+]": {
       "editorWhitespace.foreground": "#A57A4C50",
@@ -62,6 +67,9 @@
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingQuotes": "always",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   "editor.linkedEditing": true,
   "editor.semanticHighlighting.enabled": true,
   "editor.minimap.showSlider": "always",
@@ -70,12 +78,14 @@
   "editor.codeLensFontSize": 14,
   "editor.inlayHints.fontSize": 14,
   "editor.inlineSuggest.enabled": true,
+  "editor.stickyScroll.enabled": true,
   "editor.semanticTokenColorCustomizations": {},
-  "security.workspace.trust.enabled": false,
-  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
-  "task.quickOpen.skip": true,
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
   "git.autofetch": true,
   "git.ignoreRebaseWarning": true,
+  "security.workspace.trust.enabled": false,
+  "task.quickOpen.skip": true,
   "[c]": {
     "editor.formatOnSave": true
   },
@@ -141,7 +151,7 @@
   "[python]": {
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "[php]": {
     "editor.insertSpaces": true
@@ -192,24 +202,6 @@
     "editor.insertSpaces": true,
     "editor.formatOnSave": true
   },
-  "auto-close-tag.fullMode": true,
-  "auto-close-tag.activationOnLanguage": [
-    "xml",
-    "php",
-    "blade",
-    "ejs",
-    "jinja",
-    "javascriptreact",
-    "typescriptreact",
-    "markdown",
-    "vue",
-    "liquid",
-    "erb",
-    "lang-cfml",
-    "cfml",
-    "HTML (Eex)"
-  ],
-  "codesnap.transparentBackground": true,
   "evenBetterToml.formatter.allowedBlankLines": 1,
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.arrayAutoCollapse": true,
@@ -217,22 +209,28 @@
   "evenBetterToml.formatter.columnWidth": 120,
   "evenBetterToml.formatter.reorderKeys": true,
   "evenBetterToml.formatter.reorderArrays": true,
-  "template-string-converter.autoRemoveTemplateString": true,
+  "go.useLanguageServer": true,
+  "html.autoClosingTags": false,
+  "javascript.autoClosingTags": false,
   "javascript.inlayHints.enumMemberValues.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
   "javascript.inlayHints.parameterTypes.enabled": true,
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "javascript.inlayHints.variableTypes.enabled": true,
+  "typescript.autoClosingTags": false,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
   "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
   "typescript.inlayHints.variableTypes.enabled": true,
-  "python.linting.enabled": true,
-  "python.linting.prospectorEnabled": true,
-  "python.formatting.provider": "black",
+  "Lua.diagnostics.globals": ["vim"],
+  "Lua.format.defaultConfig": {
+    "trailing_table_separator": "smart"
+  },
+  "Lua.hint.enable": true,
+  "Lua.hint.setType": true,
   "markdown.extension.toc.orderedList": true,
   "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
   "rust-analyzer.debug.openDebugPane": true,
@@ -244,13 +242,28 @@
   "rust-analyzer.lens.references.enumVariant.enable": true,
   "rust-analyzer.lens.references.method.enable": true,
   "rust-analyzer.lens.references.trait.enable": true,
-  "go.useLanguageServer": true,
-  "Lua.diagnostics.globals": ["vim"],
-  "Lua.format.defaultConfig": {
-    "trailing_table_separator": "smart"
-  },
-  "Lua.hint.enable": true,
-  "Lua.hint.setType": true,
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.experimental.classRegex": [
+    "\\btw`([^`]*)", // tw`...`
+    "\\btw=\"([^\"]*)", // <xxx tw="..." />
+    "\\btw={'([^'}]*)", // <xxx tw={'...'} />
+    "\\btw\\.\\w+`([^`]*)", // tw.xxx`...`
+    "\\btw\\(.*?\\)`([^`]*)" // tw(Component)`...`
+  ],
+  "auto-close-tag.fullMode": true,
+  "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
+  "auto-close-tag.activationOnLanguage": [
+    "html",
+    "xml",
+    "php",
+    "handlebars",
+    "javascriptreact",
+    "typescriptreact",
+    "markdown",
+    "vue",
+    "HTML (Eex)"
+  ],
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
@@ -259,6 +272,8 @@
     "markdown": false,
     "plaintext": false
   },
+  "template-string-converter.autoRemoveTemplateString": true,
+  "codesnap.transparentBackground": true,
   "githubIssues.queries": [
     {
       "label": "My Issues",
@@ -279,7 +294,7 @@
         {
           "color": "#ffffff",
           "backgroundColor": "#ffbd2a",
-          "overviewRulerColor": "rgba(255, 189, 42, 0.8)"
+          "overviewRulerColor": "#ffbd2acc"
         }
       ]
     },
@@ -289,7 +304,7 @@
         {
           "color": "#fff",
           "backgroundColor": "#f06292",
-          "overviewRulerColor": "rgba(240, 98, 146, 0.8)"
+          "overviewRulerColor": "#f06292cc"
         }
       ]
     }
@@ -300,6 +315,7 @@
   "projects.refreshRoots": ["~/Coding"],
   "projects.configPath": "~/.vscode/projects.json",
   "projects.inferGroups": true,
+  "redhat.telemetry.enabled": false,
   "module-templates.engine": "handlebars",
   "module-templates.templates": {
     "redux-slice": {
