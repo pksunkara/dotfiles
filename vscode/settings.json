@@ -3,9 +3,10 @@
   "window.zoomLevel": 0,
   "window.commandCenter": false,
   "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.enableStickyScroll": true,
   "workbench.iconTheme": "file-icons",
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editor.empty.hint": "hidden",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
@@ -78,7 +79,6 @@
   "editor.codeLensFontSize": 14,
   "editor.inlayHints.fontSize": 14,
   "editor.inlineSuggest.enabled": true,
-  "editor.stickyScroll.enabled": true,
   "editor.semanticTokenColorCustomizations": {},
   "diffEditor.experimental.showMoves": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
@@ -95,7 +95,13 @@
   "[css]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[cypher]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
   },
   "[graphql]": {
     "editor.tabSize": 2,
@@ -244,11 +250,8 @@
   "rust-analyzer.lens.references.trait.enable": true,
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.experimental.classRegex": [
-    "\\btw`([^`]*)", // tw`...`
-    "\\btw=\"([^\"]*)", // <xxx tw="..." />
-    "\\btw={'([^'}]*)", // <xxx tw={'...'} />
-    "\\btw\\.\\w+`([^`]*)", // tw.xxx`...`
-    "\\btw\\(.*?\\)`([^`]*)" // tw(Component)`...`
+    ["\\bcva\\(([^)]*)\\)", "(?:'|`)([^'`]*)(?:'|`)"],
+    ["\\btw(?:\\.\\w+|\\([^\\)]*\\))([^]*);", "(?:'|`)([^'`]*)(?:'|`)"]
   ],
   "auto-close-tag.fullMode": true,
   "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
@@ -266,11 +269,12 @@
   "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
   "github.copilot.enable": {
     "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
     "yaml": false,
     "json": false,
-    "jsonc": false,
-    "markdown": false,
-    "plaintext": false
+    "jsonc": false
   },
   "template-string-converter.autoRemoveTemplateString": true,
   "codesnap.transparentBackground": true,
@@ -331,8 +335,6 @@
           "content": [
             "import { createSlice, PayloadAction } from '@reduxjs/toolkit';",
             "",
-            "import { RootState } from 'store';",
-            "",
             "interface {{pascal name}}State {}",
             "",
             "const initialState: {{pascal name}}State = {};",
@@ -341,9 +343,11 @@
             "  name: '{{camel name}}',",
             "  initialState,",
             "  reducers: {},",
+            "  selectors: {},",
             "});",
             "",
             "export const {} = {{camel name}}Slice.actions;",
+            "export const {} = {{camel name}}Slice.selectors;",
             "",
             "export default {{camel name}}Slice.reducer;",
             ""
@@ -411,11 +415,9 @@
           "name": "{{pascal name}}.styles.ts",
           "open": true,
           "content": [
-            "import styled from 'styled-components/macro';",
+            "import { tw } from 'theme';",
             "",
-            "import { {{pascal name}}Props } from './types';",
-            "",
-            "export const Container = styled.div<{{pascal name}}Props>``;",
+            "export const Container = tw.div``;",
             ""
           ]
         },
@@ -423,21 +425,23 @@
           "name": "{{pascal name}}.stories.tsx",
           "open": true,
           "content": [
-            "import { Meta, Story } from '@storybook/react';",
+            "import { Meta, StoryObj } from '@storybook/react';",
             "",
             "import {{pascal name}} from './{{pascal name}}';",
-            "import { {{pascal name}}Props } from './types';",
             "",
-            "export default {",
+            "const meta = {",
             "  title: '{{pascal name}}',",
-            "  component: {{pascal name}},",
+            "  component: {{pascal name}},{{#if children}}",
             "  args: {",
-            "{{#if children}}    children: 'Children',{{/if}}",
-            "  },",
-            "  argTypes: {},",
-            "} as Meta<{{pascal name}}Props>;",
+            "    children: 'Children',",
+            "  },{{/if}}",
+            "} satisfies Meta<typeof {{pascal name}}>;",
             "",
-            "export const Default: Story<{{pascal name}}Props> = {};",
+            "export default meta;",
+            "",
+            "type Story = StoryObj<typeof meta>;",
+            "",
+            "export const Default = {} satisfies Story;",
             ""
           ]
         },
