@@ -29,8 +29,10 @@
     "[Bearded Theme feat. Gold D Raynh]": {
       "editorInlayHint.foreground": "#A0A0A0F0",
       "editorInlayHint.background": "#00000000",
-      "editorInlayHint.typeForeground": "#A0A0A0F0",
-      "editorInlayHint.typeBackground": "#00000000"
+    },
+    "[Gruvbox Dark Hard]": {
+      "editorInlayHint.foreground": "#A0A0A0A0",
+      "editorInlayHint.background": "#00000000",
     },
     "[Kimbie Dark+]": {
       "editorWhitespace.foreground": "#A57A4C50",
