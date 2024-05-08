@@ -2,44 +2,44 @@
   "telemetry.telemetryLevel": "off",
   "window.zoomLevel": 0,
   "window.commandCenter": false,
+  "window.autoDetectColorScheme": true,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.enableStickyScroll": true,
-  "workbench.iconTheme": "file-icons",
+  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Catppuccin Mocha Darker Bordered",
+  "workbench.preferredDarkColorTheme": "Bearded Theme feat. Gold D Rynah",
+  "workbench.preferredLightColorTheme": "Bearded Theme Coffee Cream",
+  "workbench.preferredHighContrastColorTheme": "Bearded Theme feat. Gold D Rynah",
+  "workbench.preferredHighContrastLightColorTheme": "Bearded Theme Coffee Cream",
   "workbench.colorCustomizations": {
-    "[Solarized Dark]": {
+    "[Solarized*]": {
       "editorWhitespace.foreground": "#93A1A150",
-      "editorInlayHint.foreground": "#A0A0A0F0",
       "editorInlayHint.background": "#00000000"
     },
-    "[Solarized Light]": {
-      "editorWhitespace.foreground": "#93A1A150",
-      "editorInlayHint.foreground": "#A0A0A0F0",
+    "[Night Owl*]": {
       "editorInlayHint.background": "#00000000"
     },
-    "[Night Owl (No Italics)]": {
-      "editorInlayHint.foreground": "#A0A0A0F0",
+    "[Gruvbox*]": {
       "editorInlayHint.background": "#00000000"
     },
-    "[Bearded Theme feat. Gold D Raynh]": {
-      "editorInlayHint.foreground": "#A0A0A0F0",
+    "[Bearded Theme*]": {
       "editorInlayHint.background": "#00000000",
+      "editorInlayHint.typeBackground": "#00000000"
     },
-    "[Gruvbox Dark Hard]": {
-      "editorInlayHint.foreground": "#A0A0A0A0",
-      "editorInlayHint.background": "#00000000",
+    "[Catppuccin Mocha Darker Bordered]": {
+      "editorWhitespace.foreground": "#BAC2DE33"
     },
     "[Kimbie Dark+]": {
       "editorWhitespace.foreground": "#A57A4C50",
       "editorInlayHint.background": "#00000000",
       "statusBar.background": "#362712",
       "tab.inactiveBackground": "#131510",
-      "tab.activeBorder": "#5e3a1b"
+      "tab.activeBorder": "#5E3A1B"
     }
   },
   "explorer.confirmDragAndDrop": false,
