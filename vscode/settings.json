@@ -3,18 +3,16 @@
   "window.zoomLevel": 0,
   "window.commandCenter": false,
   "window.autoDetectColorScheme": true,
+  "workbench.layoutControl.enabled": false,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.enableStickyScroll": true,
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-latte",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.editor.empty.hint": "hidden",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
   "workbench.colorTheme": "Catppuccin Mocha Darker Bordered",
-  "workbench.preferredDarkColorTheme": "Bearded Theme feat. Gold D Rynah",
+  "workbench.preferredDarkColorTheme": "Bearded Theme feat. Gold D Raynh",
   "workbench.preferredLightColorTheme": "Bearded Theme Coffee Cream",
-  "workbench.preferredHighContrastColorTheme": "Bearded Theme feat. Gold D Rynah",
+  "workbench.preferredHighContrastColorTheme": "Bearded Theme feat. Gold D Raynh",
   "workbench.preferredHighContrastLightColorTheme": "Bearded Theme Coffee Cream",
   "workbench.colorCustomizations": {
     "[Solarized*]": {
@@ -44,22 +42,8 @@
   },
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  "files.exclude": {
-    "**/.idea": true,
-    "**/.nyc_output": true,
-    "**/desktop.ini": true,
-    "**/node_modules": true,
-    "**/target": true,
-    "**/Thumbs.db": true
-  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "files.associations": {
-    "vimrc": "viml"
-  },
-  "files.watcherExclude": {
-    "**/target/**": true
-  },
   "editor.fontFamily": "Fantasque Sans Mono",
   "editor.fontSize": 16,
   "editor.insertSpaces": false,
@@ -82,6 +66,36 @@
   "editor.inlayHints.fontSize": 14,
   "editor.inlineSuggest.enabled": true,
   "editor.semanticTokenColorCustomizations": {},
+  "files.exclude": {
+    "**/.idea": true,
+    "**/.nyc_output": true,
+    "**/desktop.ini": true,
+    "**/node_modules": true,
+    "**/target": true,
+    "**/Thumbs.db": true
+  },
+  "files.associations": {
+    "vimrc": "viml"
+  },
+  "files.watcherExclude": {
+    "**/target/**": true
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.editor.customLabels.patterns": {
+    "**/utils.(rs|ts)": "${dirname} - utils",
+    "**/mod.rs": "${dirname} - mod",
+    "**/index.ts": "${dirname} - index",
+    "**/types.ts": "${dirname} - types",
+    "**/app/**/page.tsx": "${dirname} - page",
+    "**/app/**/page.mdx": "${dirname} - page",
+    "**/app/**/page.styles.ts": "${dirname} - styles",
+    "**/app/**/page.stories.tsx": "${dirname} - stories",
+    "**/app/**/layout.tsx": "${dirname} - layout",
+    "**/app/**/layout.styles.ts": "${dirname} - layout styles",
+    "**/app/**/template.tsx": "${dirname} - template"
+  },
   "diffEditor.experimental.showMoves": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "git.autofetch": true,
@@ -324,41 +338,35 @@
   "redhat.telemetry.enabled": false,
   "module-templates.engine": "handlebars",
   "module-templates.templates": {
-    "redux-slice": {
-      "displayName": "Redux slice",
-      "defaultPath": "src/slices",
+    "react-common": {
+      "folder": "{{pascal name}}",
       "questions": {
-        "name": "Slice name?"
+        "name": "Component name?"
       },
       "files": [
         {
-          "name": "{{camel name}}.ts",
+          "name": "index.ts",
+          "content": [
+            "export { default } from './{{pascal name}}';",
+            "export * from './types';",
+            ""
+          ]
+        },
+        {
+          "name": "{{pascal name}}.styles.ts",
           "open": true,
           "content": [
-            "import { createSlice, PayloadAction } from '@reduxjs/toolkit';",
+            "import { tw } from 'theme';",
             "",
-            "interface {{pascal name}}State {}",
-            "",
-            "const initialState: {{pascal name}}State = {};",
-            "",
-            "export const {{camel name}}Slice = createSlice({",
-            "  name: '{{camel name}}',",
-            "  initialState,",
-            "  reducers: {},",
-            "  selectors: {},",
-            "});",
-            "",
-            "export const {} = {{camel name}}Slice.actions;",
-            "export const {} = {{camel name}}Slice.selectors;",
-            "",
-            "export default {{camel name}}Slice.reducer;",
+            "export const Container = tw.div``;",
             ""
           ]
         }
       ]
     },
     "react-component": {
-      "displayName": "React typescript component",
+      "extends": ["react-common"],
+      "displayName": "React component",
       "defaultPath": "src/components",
       "folder": "{{pascal name}}",
       "questions": {
@@ -376,21 +384,13 @@
       },
       "files": [
         {
-          "name": "index.ts",
-          "content": [
-            "export { default } from './{{pascal name}}';",
-            "export * from './types';",
-            ""
-          ]
-        },
-        {
           "name": "types.ts",
           "open": true,
           "content": [
             "import { HTMLAttributes{{#if children}}, ReactNode{{/if}} } from 'react';",
             "",
             "export interface {{pascal name}}Props extends HTMLAttributes<HTMLDivElement> {",
-            "{{#if children}}  children: ReactNode,{{/if}}",
+            "{{#if children}}  children: ReactNode;{{/if}}",
             "}",
             ""
           ]
@@ -410,16 +410,6 @@
             "};",
             "",
             "export default {{pascal name}};",
-            ""
-          ]
-        },
-        {
-          "name": "{{pascal name}}.styles.ts",
-          "open": true,
-          "content": [
-            "import { tw } from 'theme';",
-            "",
-            "export const Container = tw.div``;",
             ""
           ]
         },
@@ -461,6 +451,168 @@
             "test('renders', async () => {",
             "  render(<{{pascal name}}{{#if children}}>Children</{{pascal name}}>{{else}} />{{/if}});",
             "});",
+            ""
+          ]
+        }
+      ]
+    },
+    "react-view": {
+      "extends": ["react-common"],
+      "displayName": "React view",
+      "defaultPath": "src/views",
+      "folder": "{{pascal name}}",
+      "questions": {
+        "name": "View name?"
+      },
+      "files": [
+        {
+          "name": "types.ts",
+          "open": true,
+          "content": ["export interface {{pascal name}}Props {}", ""]
+        },
+        {
+          "name": "{{pascal name}}.tsx",
+          "open": true,
+          "content": [
+            "import React from 'react';",
+            "",
+            "import { {{pascal name}}Props } from './types';",
+            "",
+            "import { Container } from './{{pascal name}}.styles';",
+            "",
+            "const {{pascal name}}: React.FC<{{pascal name}}Props> = () => {",
+            "  return <Container></Container>;",
+            "};",
+            "",
+            "export default {{pascal name}};",
+            ""
+          ]
+        },
+        {
+          "name": "{{pascal name}}.stories.tsx",
+          "open": true,
+          "content": [
+            "import { Meta, StoryObj } from '@storybook/react';",
+            "",
+            "import {{pascal name}} from './{{pascal name}}';",
+            "",
+            "const meta = {",
+            "  title: '{{pascal name}}',",
+            "  component: {{pascal name}},",
+            "} satisfies Meta<typeof {{pascal name}}>;",
+            "",
+            "export default meta;",
+            "",
+            "type Story = StoryObj<typeof meta>;",
+            "",
+            "export const Default = {} satisfies Story;",
+            ""
+          ]
+        },
+        {
+          "name": "{{pascal name}}.test.tsx",
+          "open": true,
+          "content": [
+            "import React from 'react';",
+            "import userEvent from '@testing-library/user-event';",
+            "",
+            "import { render, screen } from 'tests';",
+            "",
+            "import {{pascal name}} from './{{pascal name}}';",
+            "",
+            "test('renders', async () => {",
+            "  render(<{{pascal name}} />);",
+            "});",
+            ""
+          ]
+        }
+      ]
+    },
+    "next-page": {
+      "displayName": "NextJS page",
+      "defaultPath": "src/app",
+      "folder": "{{name}}",
+      "questions": {
+        "name": "Page name?"
+      },
+      "files": [
+        {
+          "name": "page.tsx",
+          "open": true,
+          "content": [
+            "import React from 'react';",
+            "",
+            "import { Container } from './page.styles';",
+            "",
+            "const {{pascal name}}Page: React.FC = () => {",
+            "  return <Container></Container>;",
+            "};",
+            "",
+            "export default {{pascal name}}Page;",
+            ""
+          ]
+        },
+        {
+          "name": "page.styles.ts",
+          "open": true,
+          "content": [
+            "import { tw } from 'theme';",
+            "",
+            "export const Container = tw.div``;",
+            ""
+          ]
+        },
+        {
+          "name": "page.stories.tsx",
+          "open": true,
+          "content": [
+            "import { Meta, StoryObj } from '@storybook/react';",
+            "",
+            "import {{pascal name}}Page from './page';",
+            "",
+            "const meta = {",
+            "  title: '{{pascal name}}Page',",
+            "  component: {{pascal name}}Page,",
+            "} satisfies Meta<typeof {{pascal name}}Page>;",
+            "",
+            "export default meta;",
+            "",
+            "type Story = StoryObj<typeof meta>;",
+            "",
+            "export const Default = {} satisfies Story;",
+            ""
+          ]
+        }
+      ]
+    },
+    "redux-slice": {
+      "displayName": "Redux slice",
+      "defaultPath": "src/slices",
+      "questions": {
+        "name": "Slice name?"
+      },
+      "files": [
+        {
+          "name": "{{camel name}}.ts",
+          "open": true,
+          "content": [
+            "import { createSlice, PayloadAction } from '@reduxjs/toolkit';",
+            "",
+            "interface {{pascal name}}State {}",
+            "",
+            "const initialState: {{pascal name}}State = {};",
+            "",
+            "export const {{camel name}}Slice = createSlice({",
+            "  name: '{{camel name}}',",
+            "  initialState,",
+            "  reducers: {},",
+            "  selectors: {},",
+            "});",
+            "",
+            "export const {} = {{camel name}}Slice.actions;",
+            "export const {} = {{camel name}}Slice.selectors;",
+            "",
+            "export default {{camel name}}Slice.reducer;",
             ""
           ]
         }
