@@ -8,8 +8,8 @@ function fish_prompt
 	set -l start (set_color $status_color)"● "
 	set -l folder (set_color cyan)(pwd | sed "s|$HOME|⌂|" | sed "s|⌂/Coding|⍴|")" "
 
-	set -l is_git_repo (command git rev-parse --is-inside-work-tree ^/dev/null)
-	set -l have_commits (command git log --oneline -n 1 ^/dev/null)
+	set -l is_git_repo (command git rev-parse --is-inside-work-tree 2>/dev/null)
+	set -l have_commits (command git log --oneline -n 1 2>/dev/null)
 	set -l branch ""
 	set -l git_dirty ""
 	set -l git_stash ""
@@ -28,7 +28,7 @@ function fish_prompt
 
 	if test -e Cargo.toml
 		set lang ""
-		set lang_version (rustup show active-toolchain | cut -d' ' -f1 | sed -E "s/-x86_64-apple-darwin//")
+		set lang_version (rustup show active-toolchain | cut -d' ' -f1 | sed -E "s/-.*//")
 	end
 
 	if test -e mix.exs
@@ -40,13 +40,13 @@ function fish_prompt
 		set branch (set_color brmagenta)" ("(set_color yellow)"empty"(set_color brmagenta)")"
 		set git_dirty " "
 	else if test -n "$is_git_repo"
-		set git_branch_name (command git symbolic-ref --short HEAD ^/dev/null; or command git show-ref --head -s --abbrev | head -n1 ^/dev/null)
+		set git_branch_name (command git symbolic-ref --short HEAD 2>/dev/null; or command git show-ref --head -s --abbrev | head -n1 2>/dev/null)
 		set branch (set_color brmagenta)" ("(set_color red)$git_branch_name(set_color brmagenta)")"
 
-		set -l is_git_dirty (command git status --porcelain --ignore-submodules ^/dev/null)
+		set -l is_git_dirty (command git status --porcelain --ignore-submodules 2>/dev/null)
 		set git_dirty " "
 
-		set -l git_upstream_branch_name (command git bu ^/dev/null)
+		set -l git_upstream_branch_name (command git bu 2>/dev/null)
 
 		set -l git_stash_count (command git st)
 
