@@ -206,19 +206,16 @@
             "_modules": {
               "packages": [
                 {
-                  "name": "@vue/cli"
+                  "name": "@withgraphite/graphite-cli"
                 },
                 {
                   "name": "lerna-update-wizard"
                 },
                 {
-                  "name": "npm-check"
-                },
-                {
                   "name": "svg-term-cli"
                 },
                 {
-                  "name": "yarn"
+                  "name": "pnpm"
                 }
               ]
             }
@@ -250,7 +247,7 @@
                   "name": "poetry"
                 },
                 {
-                  "name": "pylama"
+                  "name": "prospector"
                 }
               ]
             }

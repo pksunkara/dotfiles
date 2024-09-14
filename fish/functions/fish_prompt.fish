@@ -6,7 +6,7 @@ function fish_prompt
 	end
 
 	set -l start (set_color $status_color)"● "
-	set -l folder (set_color cyan)(pwd | sed "s|$HOME|⌂|" | sed "s|⌂/Coding|⍴|")" "
+	set -l folder (set_color cyan)(pwd | sed "s|$HOME||" | sed "s|/Coding|󰘧|")" "
 
 	set -l is_git_repo (command git rev-parse --is-inside-work-tree 2>/dev/null)
 	set -l have_commits (command git log --oneline -n 1 2>/dev/null)
@@ -51,7 +51,7 @@ function fish_prompt
 		set -l git_stash_count (command git st)
 
 		if test -n "$is_git_dirty"
-			set git_dirty " 華"
+			set git_dirty " 󰦒 "
 		end
 
 		if test $git_stash_count -ne 0
