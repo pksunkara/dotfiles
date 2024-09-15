@@ -1,10 +1,11 @@
 set fish_greeting
 
 alias cat="bat"
-alias ls="exa"
+alias ls="eza"
+alias la="ls -lah --git"
+alias lg="ls -lah --git-repos"
 alias vim="nvim"
 
-set -x LSCOLORS ExGxBxDxCxEgEdxbxgxcxd
 set -x EDITOR nvim
 set -x CLICOLOR 1
 set -x LANG en_US.UTF-8

@@ -4,6 +4,7 @@
   "window.commandCenter": false,
   "window.autoDetectColorScheme": true,
   "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.orientation": "vertical",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.enableStickyScroll": true,
   "workbench.iconTheme": "catppuccin-latte",

@@ -51,25 +51,6 @@
                   "name": "alexdavid/tap"
                 },
                 {
-                  "name": "gapple/services"
-                },
-                {
-                  "name": "github/gh"
-                },
-                {
-                  "name": "heroku/brew"
-                },
-                {
-                  "name": "homebrew/cask"
-                },
-                {
-                  "name": "homebrew/cask-fonts"
-                },
-                {
-                  "name": "rhysd/git-brws",
-                  "remote": "https://github.com/rhysd/git-brws"
-                },
-                {
                   "name": "termapps/tap"
                 }
               ],
@@ -87,13 +68,16 @@
                   "name": "cmake"
                 },
                 {
+                  "name": "dive"
+                },
+                {
                   "name": "docker-slim"
                 },
                 {
                   "name": "enquirer"
                 },
                 {
-                  "name": "exa"
+                  "name": "eza"
                 },
                 {
                   "name": "fzf"
@@ -111,16 +95,13 @@
                   "name": "git-branch-status"
                 },
                 {
-                  "name": "git-brws"
-                },
-                {
                   "name": "git-interactive-rebase-tool"
                 },
                 {
-                  "name": "git-trim"
+                  "name": "git-lfs"
                 },
                 {
-                  "name": "heroku"
+                  "name": "git-trim"
                 },
                 {
                   "name": "hexyl"
@@ -147,13 +128,22 @@
                   "name": "nmap"
                 },
                 {
+                  "name": "neovim"
+                },
+                {
                   "name": "postgresql"
+                },
+                {
+                  "name": "publisher"
                 },
                 {
                   "name": "reattach-to-user-namespace"
                 },
                 {
                   "name": "redis"
+                },
+                {
+                  "name": "ripgrep"
                 },
                 {
                   "name": "tealdeer"
@@ -169,17 +159,18 @@
                 }
               ],
               "casks": [
+                "1password",
+                "alacritty",
                 "dash",
-                "dashlane",
                 "docker",
                 "font-fantasque-sans-mono",
                 "font-fira-mono-nerd-font",
                 "github",
                 "google-chrome",
-                "kitematic",
-                "postico",
+                "ngrok",
+                "raycast",
                 "skitch",
-                "tableplus"
+                "visual-studio-code"
               ]
             }
           }
