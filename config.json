@@ -51,6 +51,9 @@
                   "name": "alexdavid/tap"
                 },
                 {
+                  "name": "supabase/tap"
+                },
+                {
                   "name": "termapps/tap"
                 }
               ],
@@ -59,13 +62,7 @@
                   "name": "bat"
                 },
                 {
-                  "name": "brew-cask-completion"
-                },
-                {
-                  "name": "clang-format"
-                },
-                {
-                  "name": "cmake"
+                  "name": "buf"
                 },
                 {
                   "name": "dive"
@@ -74,10 +71,16 @@
                   "name": "docker-slim"
                 },
                 {
+                  "name": "dua-cli"
+                },
+                {
                   "name": "enquirer"
                 },
                 {
                   "name": "eza"
+                },
+                {
+                  "name": "fd"
                 },
                 {
                   "name": "fzf"
@@ -104,6 +107,15 @@
                   "name": "git-trim"
                 },
                 {
+                  "name": "go"
+                },
+                {
+                  "name": "gopls"
+                },
+                {
+                  "name": "helm"
+                },
+                {
                   "name": "hexyl"
                 },
                 {
@@ -119,6 +131,9 @@
                   "name": "jq"
                 },
                 {
+                  "name": "k9s"
+                },
+                {
                   "name": "lazydocker"
                 },
                 {
@@ -131,6 +146,9 @@
                   "name": "neovim"
                 },
                 {
+                  "name": "pastel"
+                },
+                {
                   "name": "postgresql"
                 },
                 {
@@ -140,10 +158,13 @@
                   "name": "reattach-to-user-namespace"
                 },
                 {
-                  "name": "redis"
+                  "name": "ripgrep"
                 },
                 {
-                  "name": "ripgrep"
+                  "name": "sad"
+                },
+                {
+                  "name": "supabase"
                 },
                 {
                   "name": "tealdeer"

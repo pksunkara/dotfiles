@@ -1,6 +1,8 @@
 local wk = require('which-key')
 local actions = require('telescope.actions')
+local action_state = require('telescope.actions.state')
 local builtin = require('telescope.builtin')
+local diffview = require('diffview')
 
 require('telescope').setup({
   defaults = {
@@ -52,6 +54,32 @@ require('telescope').setup({
         },
       },
     },
+    git_commits = {
+      mappings = {
+        i = {
+          ['<CR>'] = function(bufnr)
+            local entry = action_state.get_selected_entry()
+            actions.close(bufnr)
+
+            diffview.open(('%s^!'):format(entry.value))
+          end,
+          ['<C-o>'] = actions.select_default,
+        },
+      },
+    },
+    git_bcommits = {
+      mappings = {
+        i = {
+          ['<CR>'] = function(bufnr)
+            local entry = action_state.get_selected_entry()
+            actions.close(bufnr)
+
+            diffview.open(('%s^!'):format(entry.value))
+          end,
+          ['<C-o>'] = actions.select_default,
+        },
+      },
+    },
   },
   extensions = {
     undo = {
@@ -68,6 +96,10 @@ wk.add({
   { '<leader>p', builtin.find_files, desc = 'Go to file' },
   { '<leader>b', builtin.buffers, desc = 'Go to buffer' },
   { '<leader>r', builtin.oldfiles, desc = 'Go to recent file' },
+  { '<leader>gb', builtin.git_branches, desc = 'Branches' },
+  { '<leader>gl', builtin.git_commits, desc = 'Commits' },
+  { '<leader>gs', builtin.git_stash, desc = 'Stashes' },
+  { '<leader>gfl', builtin.git_bcommits, desc = 'Commits for file' },
   { '<C-k><C-t>', builtin.colorscheme, desc = 'Change color theme' },
 })
 

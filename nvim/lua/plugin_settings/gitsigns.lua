@@ -1,76 +1,34 @@
 local wk = require('which-key')
 local gitsigns = require('gitsigns')
 
-local function revisions(fn, desc)
-  return {
-    { 'i', fn, desc = desc .. ' index' },
-    {
-      '0',
-      function()
-        fn('~0')
-      end,
-      desc = desc .. ' HEAD',
-    },
-    {
-      '1',
-      function()
-        fn('~1')
-      end,
-      desc = desc .. ' HEAD~',
-    },
-    {
-      '2',
-      function()
-        fn('~2')
-      end,
-      desc = desc .. ' HEAD~2',
-    },
-    {
-      '3',
-      function()
-        fn('~3')
-      end,
-      desc = desc .. ' HEAD~3',
-    },
-  }
-end
-
 local function on_attach(bufnr)
   wk.add({
     {
       buffer = bufnr,
       {
-        { '<leader>g', group = "Git" },
-        { '<leader>gp', gitsigns.preview_hunk, desc = 'Preview hunk' },
-        { '<leader>gv', gitsigns.select_hunk, desc = 'Select hunk' },
         {
-          '<leader>gb',
-          group = 'Buffer',
+          '<leader>gf',
+          group = 'File',
           expand = function()
             return {
-              { 's', gitsigns.stage_buffer, desc = 'Stage buffer' },
-              { 'u', gitsigns.reset_buffer_index, desc = 'Unstage buffer' },
-              { 'r', gitsigns.reset_buffer, desc = 'Reset buffer' },
+              { 's', gitsigns.stage_buffer, desc = 'Stage file' },
+              { 'u', gitsigns.reset_buffer_index, desc = 'Unstage file' },
+              { 'r', gitsigns.reset_buffer, desc = 'Reset file' },
             }
-          end
+          end,
         },
         {
           '<leader>gh',
           group = 'Hunk',
           expand = function()
             return {
+              { 'p', gitsigns.preview_hunk, desc = 'Preview hunk' },
+              { 'v', gitsigns.select_hunk, desc = 'Select hunk' },
               { 's', gitsigns.stage_hunk, desc = 'Stage hunk' },
               { 'u', gitsigns.undo_stage_hunk, desc = 'Unstage hunk' },
               { 'r', gitsigns.reset_hunk, desc = 'Reset hunk' },
             }
-          end
-        },
-        {
-          '<leader>gw',
-          group = "Show",
-          expand = function()
-            return revisions(gitsigns.show, 'Show')
-          end
+          end,
         },
       },
     },
