@@ -1,6 +1,6 @@
 require('catppuccin').setup({
   highlight_overrides = {
-    mocha = function (C)
+    mocha = function(C)
       return {
         GitSignsChangeDelete = { fg = C.lavender },
       }
@@ -11,5 +11,5 @@ require('catppuccin').setup({
     dashboard = false,
     which_key = true,
     window_picker = true,
-  }
+  },
 })

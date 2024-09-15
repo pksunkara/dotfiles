@@ -1,6 +1,6 @@
-require('nvim-web-devicons').setup {
+require('nvim-web-devicons').setup({
   default = true,
-}
+})
 
 require('plugin_settings.legendary')
 require('plugin_settings.telescope')

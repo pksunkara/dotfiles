@@ -36,11 +36,14 @@ local function on_attach(bufnr)
 
   wk.add({
     {
-      buffer = bufnr, expr = true,
+      buffer = bufnr,
+      expr = true,
       {
         ']g',
         function()
-          if vim.wo.diff then return ']g' end
+          if vim.wo.diff then
+            return ']g'
+          end
           vim.schedule(gitsigns.next_hunk)
           return '<Ignore>'
         end,
@@ -49,7 +52,9 @@ local function on_attach(bufnr)
       {
         '[g',
         function()
-          if vim.wo.diff then return ']g' end
+          if vim.wo.diff then
+            return ']g'
+          end
           vim.schedule(gitsigns.prev_hunk)
           return '<Ignore>'
         end,
@@ -84,4 +89,3 @@ gitsigns.setup({
     return '⊕ ' .. added .. '⊙ ' .. changed .. '⊗ ' .. removed
   end,
 })
-

@@ -62,7 +62,7 @@ wk.add({
 
 wk.add({
   {
-    mode = { "x" },
+    mode = { 'x' },
     {
       '<A-h>',
       function()

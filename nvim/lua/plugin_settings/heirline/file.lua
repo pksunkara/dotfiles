@@ -7,13 +7,11 @@ function M.init(self)
   self.filename = vim.api.nvim_buf_get_name(0)
   self.extension = vim.fn.fnamemodify(self.filename, ':e')
 
-  self.icon, self.icon_color = icons.get_icon_color(
-    self.filename, self.extension, { default = true }
-  )
+  self.icon, self.icon_color = icons.get_icon_color(self.filename, self.extension, { default = true })
 end
 
 function M.provider(self)
-  local filename = vim.fn.fnamemodify(self.filename, ":.")
+  local filename = vim.fn.fnamemodify(self.filename, ':.')
   local ret
 
   if self.icon then

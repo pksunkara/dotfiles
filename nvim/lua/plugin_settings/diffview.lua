@@ -23,7 +23,7 @@ diffview.setup({
 })
 
 wk.add({
-  { '<leader>g', group = "Git" },
+  { '<leader>g', group = 'Git' },
   {
     '<leader>gd',
     group = 'Diff',
@@ -43,7 +43,7 @@ wk.add({
             return diffview.open('--staged')
           end,
           desc = 'Diff staged',
-        }
+        },
       }
     end,
   },

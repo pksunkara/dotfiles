@@ -164,6 +164,9 @@
                   "name": "sad"
                 },
                 {
+                  "name": "stylua"
+                },
+                {
                   "name": "supabase"
                 },
                 {
@@ -182,8 +185,10 @@
               "casks": [
                 "1password",
                 "alacritty",
+                "basictex",
                 "dash",
                 "docker",
+                "dropbox",
                 "font-fantasque-sans-mono",
                 "font-fira-mono-nerd-font",
                 "github",
@@ -191,7 +196,8 @@
                 "ngrok",
                 "raycast",
                 "skitch",
-                "visual-studio-code"
+                "visual-studio-code",
+                "vlc"
               ]
             }
           }

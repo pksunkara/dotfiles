@@ -1,4 +1,4 @@
-local C = require('catppuccin.palettes').get_palette('mocha');
+local C = require('catppuccin.palettes').get_palette('mocha')
 local U = require('catppuccin.utils.colors')
 
 local M = {}
@@ -42,13 +42,9 @@ local mode_text = {
   ['null'] = 'NONE',
 }
 
-local mode_name_max_length = math.max(
-  unpack(
-    vim.tbl_map(function(str)
-      return #str
-    end, vim.tbl_values(mode_text))
-  )
-)
+local mode_name_max_length = math.max(unpack(vim.tbl_map(function(str)
+  return #str
+end, vim.tbl_values(mode_text))))
 
 local mode_colors_id = {
   ['NORMAL'] = 'NORMAL',
@@ -100,9 +96,7 @@ function M.provider(self)
 
   vim.print(mode_name_max_length)
 
-  return string.rep(' ', math.floor(padding_length / 2))
-      .. val
-      .. string.rep(' ', math.ceil(padding_length / 2))
+  return string.rep(' ', math.floor(padding_length / 2)) .. val .. string.rep(' ', math.ceil(padding_length / 2))
 end
 
 function M.hl(self)
@@ -120,13 +114,11 @@ function M.hl(self)
 end
 
 M.update = {
-  "ModeChanged",
-  pattern = "*:*",
-  callback = vim.schedule_wrap(
-    function()
-      vim.cmd("redrawstatus")
-    end
-  ),
+  'ModeChanged',
+  pattern = '*:*',
+  callback = vim.schedule_wrap(function()
+    vim.cmd('redrawstatus')
+  end),
 }
 
 return M

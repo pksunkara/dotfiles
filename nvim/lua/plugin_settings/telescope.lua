@@ -100,6 +100,7 @@ wk.add({
   { '<leader>gl', builtin.git_commits, desc = 'Commits' },
   { '<leader>gs', builtin.git_stash, desc = 'Stashes' },
   { '<leader>gfl', builtin.git_bcommits, desc = 'Commits for file' },
+  { '<C-k>m', builtin.filetypes, desc = 'Change filetype' },
   { '<C-k><C-t>', builtin.colorscheme, desc = 'Change color theme' },
 })
 
