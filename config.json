@@ -19,6 +19,10 @@
           "data": {
             "paths": [
               {
+                "source": "alacritty",
+                "destination": "/Users/pksunkara/.config/alacritty"
+              },
+              {
                 "source": "nvim",
                 "destination": "/Users/pksunkara/.config/nvim"
               },
@@ -48,9 +52,6 @@
               },
               "taps": [
                 {
-                  "name": "alexdavid/tap"
-                },
-                {
                   "name": "supabase/tap"
                 },
                 {
@@ -60,6 +61,9 @@
               "kegs": [
                 {
                   "name": "bat"
+                },
+                {
+                  "name": "bandwhich"
                 },
                 {
                   "name": "buf"
@@ -93,9 +97,6 @@
                 },
                 {
                   "name": "git-absorb"
-                },
-                {
-                  "name": "git-branch-status"
                 },
                 {
                   "name": "git-interactive-rebase-tool"
@@ -134,10 +135,10 @@
                   "name": "k9s"
                 },
                 {
-                  "name": "lazydocker"
+                  "name": "kubernetes-cli"
                 },
                 {
-                  "name": "lazygit"
+                  "name": "lazydocker"
                 },
                 {
                   "name": "nmap"
@@ -258,7 +259,7 @@
                   "name": "pipdeptree"
                 },
                 {
-                  "name": "poetry"
+                  "name": "uv"
                 },
                 {
                   "name": "prospector"
