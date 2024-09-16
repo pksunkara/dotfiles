@@ -31,8 +31,8 @@
                 "destination": "/Users/pksunkara/.config/git"
               },
               {
-                "source": "tmux.conf",
-                "destination": "/Users/pksunkara/.tmux.conf"
+                "source": "tmux",
+                "destination": "/Users/pksunkara/.config/tmux"
               }
             ]
           }
