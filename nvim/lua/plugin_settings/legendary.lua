@@ -12,7 +12,7 @@ legendary.setup({
 
 wk.add({
   {
-    '<leader>P',
+    '<C-S-p>',
     function()
       legendary.find({
         filters = {

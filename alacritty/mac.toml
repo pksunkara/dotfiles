@@ -1,0 +1,20 @@
+[window]
+option_as_alt = "Both"
+
+# [[keyboard.bindings]]
+# action = "None"
+# key    = "K"
+# mode   = "~Vi|~Search"
+# mods   = "Command"
+
+# [[keyboard.bindings]]
+# chars = "\u000c"
+# key   = "L"
+# mode  = "~Vi|~Search"
+# mods  = "Command"
+
+# [[keyboard.bindings]]
+# action = "ClearHistory"
+# key    = "L"
+# mode   = "~Vi|~Search"
+# mods   = "Command"

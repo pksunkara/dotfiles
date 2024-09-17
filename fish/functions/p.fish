@@ -1,5 +1,5 @@
 function __projects_list
-	find ~/Coding -maxdepth 2 -mindepth 2 -type d
+	fd '.*' ~/Coding --max-depth 2 --min-depth 2 --type d
 end
 
 function p -d "Project Manager"
@@ -15,7 +15,7 @@ function p -d "Project Manager"
 			case s
 				for project in (__projects_list)
 					cd $project
-					git bs
+					# TODO: Branches and their statuses
 				end
 
 				cd $curdir

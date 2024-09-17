@@ -93,15 +93,18 @@ require('telescope').setup({
 })
 
 wk.add({
-  { '<leader>p', builtin.find_files, desc = 'Go to file' },
+  { '<C-p>', '<D-p>', builtin.find_files, desc = 'Go to file' },
   { '<leader>b', builtin.buffers, desc = 'Go to buffer' },
   { '<leader>r', builtin.oldfiles, desc = 'Go to recent file' },
   { '<leader>gb', builtin.git_branches, desc = 'Branches' },
   { '<leader>gl', builtin.git_commits, desc = 'Commits' },
   { '<leader>gs', builtin.git_stash, desc = 'Stashes' },
   { '<leader>gfl', builtin.git_bcommits, desc = 'Commits for file' },
-  { '<C-k>m', builtin.filetypes, desc = 'Change filetype' },
-  { '<C-k><C-t>', builtin.colorscheme, desc = 'Change color theme' },
+  {
+    mode = 'nixsotc',
+    { '<C-k>m', builtin.filetypes, desc = 'Change filetype' },
+    { '<C-k><C-t>', builtin.colorscheme, desc = 'Change color theme' },
+  },
 })
 
 require('plugin_settings.telescope.tabs')

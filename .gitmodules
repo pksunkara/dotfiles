@@ -106,3 +106,12 @@
 [submodule "nvim/pack/bundle/start/nvim-surround"]
 	path = nvim/pack/bundle/start/nvim-surround
 	url = https://github.com/kylechui/nvim-surround
+[submodule "fish/bundle/nvm"]
+	path = fish/bundle/nvm
+	url = https://github.com/jorgebucaran/nvm.fish
+[submodule "nvim/pack/bundle/start/eyeliner.nvim"]
+	path = nvim/pack/bundle/start/eyeliner.nvim
+	url = https://github.com/jinh0/eyeliner.nvim
+[submodule "alacritty/alacritty-theme"]
+	path = alacritty/alacritty-theme
+	url = https://github.com/alacritty/alacritty-theme

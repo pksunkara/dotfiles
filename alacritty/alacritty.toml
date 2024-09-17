@@ -1,31 +1,20 @@
-[window]
-option_as_alt = "Both"
+import = ["~/.config/alacritty/alacritty-theme/themes/ayu_dark.toml", "~/.config/alacritty/os.toml"]
 
 [font]
 size = 13
 
 [font.bold]
 family = "FiraMono Nerd Font"
-style = "Bold"
+style  = "Bold"
 
 [font.bold_italic]
 family = "FiraMono Nerd Font"
-style = "Bold Italic"
+style  = "Bold Italic"
 
 [font.italic]
 family = "FiraMono Nerd Font"
-style = "Italic"
+style  = "Italic"
 
 [font.normal]
 family = "FiraMono Nerd Font"
-style = "Regular"
-
-[[keyboard.bindings]]
-action = "Paste"
-key = "V"
-mods = "Command"
-
-[[keyboard.bindings]]
-action = "Copy"
-key = "C"
-mods = "Command"
+style  = "Regular"
