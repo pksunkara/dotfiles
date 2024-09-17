@@ -4,8 +4,11 @@ alias cat="bat"
 alias ls="eza"
 alias la="ls -lah --git"
 alias lg="ls -lah --git-repos"
-alias vim="nvim"
+alias du="dua"
+alias find="fd"
 alias jq="jaq"
+alias diff="difft --display=side-by-side-show-both"
+alias vim="nvim"
 
 set -x EDITOR nvim
 set -x CLICOLOR 1

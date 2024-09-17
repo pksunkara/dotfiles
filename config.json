@@ -23,6 +23,10 @@
                 "destination": "/Users/pksunkara/.config/alacritty"
               },
               {
+                "source": "alacritty/mac.toml",
+                "destination": "/Users/pksunkara/.config/alacritty/os.toml"
+              },
+              {
                 "source": "nvim",
                 "destination": "/Users/pksunkara/.config/nvim"
               },

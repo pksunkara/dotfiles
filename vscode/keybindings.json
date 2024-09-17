@@ -1,13 +1,14 @@
 [
-  // Redo
-  {
-    "key": "cmd+y",
-    "command": "redo",
-    "when": "isMac"
-  },
+  // cmd+m, cmd+g, cmd+e, cmd+r
+  //#region Editor -> Redo
   {
     "key": "shift+cmd+z",
     "command": "-redo",
+    "when": "isMac"
+  },
+  {
+    "key": "cmd+y",
+    "command": "redo",
     "when": "isMac"
   },
   {
@@ -15,9 +16,9 @@
     "command": "-redo",
     "when": "!isMac"
   },
-  // Most used
-  // cmd+m, cmd+g, cmd+e, cmd+r
-  // Explorer
+  //#endregion
+  //#region Files Explorer
+  // New file
   {
     "key": "cmd+a",
     "command": "explorer.newFile",
@@ -25,27 +26,35 @@
   },
   {
     "key": "ctrl+a",
-    "command": "explorer.newFolder",
-    "when": "isMac && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "ctrl+a",
     "command": "explorer.newFile",
     "when": "!isMac && !explorerResourceReadonly && !inputFocus"
+  },
+  // New folder
+  {
+    "key": "ctrl+a",
+    "command": "explorer.newFolder",
+    "when": "isMac && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "cmd+a",
     "command": "explorer.newFolder",
     "when": "!isMac && !explorerResourceReadonly && !inputFocus"
   },
+  // New from template
   {
     "key": "alt+a",
     "command": "extension.newModuleFromTemplate",
     "when": "!explorerResourceReadonly && !inputFocus"
   },
+  // Rename
   {
     "key": "enter",
     "command": "-renameFile",
+    "when": "isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "renameFile",
     "when": "isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
@@ -54,40 +63,28 @@
     "when": "!isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "cmd+r",
-    "command": "renameFile",
-    "when": "isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
     "key": "ctrl+r",
     "command": "renameFile",
     "when": "!isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
+  // Open
   {
     "key": "cmd+down",
     "command": "-explorer.openAndPassFocus",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+    "when": "isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
   },
   {
     "key": "enter",
     "command": "explorer.openAndPassFocus",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
   },
+  // Move file to trash
   {
     "key": "ctrl+backspace",
     "command": "moveFileToTrash",
     "when": "!isMac && explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
   },
-  {
-    "key": "shift+delete",
-    "command": "deleteFile",
-    "when": "isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "delete",
-    "command": "deleteFile",
-    "when": "isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
-  },
+  // Delete file when trash exists
   {
     "key": "alt+cmd+backspace",
     "command": "-deleteFile",
@@ -99,16 +96,28 @@
     "when": "isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
   },
   {
+    "key": "shift+delete",
+    "command": "deleteFile",
+    "when": "isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+  },
+  {
     "key": "shift+ctrl+backspace",
     "command": "deleteFile",
     "when": "!isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
   },
+  // Delete file when no trash
+  {
+    "key": "delete",
+    "command": "deleteFile",
+    "when": "isMac && !explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+  },
   {
     "key": "ctrl+backspace",
     "command": "deleteFile",
-    "when": "!isMac && filesExplorerFocus && foldersViewVisible && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
+    "when": "!isMac && !explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
   },
-  // Editor groups
+  //#endregion
+  //#region Editor Groups
   {
     "key": "cmd+k cmd+m",
     "command": "-workbench.action.toggleMaximizeEditorGroup",
@@ -116,7 +125,7 @@
   },
   {
     "key": "cmd+k cmd+m",
-    "command": "workbench.action.minimizeOtherEditors",
+    "command": "workbench.action.toggleEditorWidths",
     "when": "isMac"
   },
   {
@@ -126,10 +135,11 @@
   },
   {
     "key": "ctrl+k ctrl+m",
-    "command": "workbench.action.minimizeOtherEditors",
+    "command": "workbench.action.toggleEditorWidths",
     "when": "!isMac"
   },
-  // Panel
+  //#endregion
+  //#region Panel
   {
     "key": "cmd+k cmd+p",
     "command": "workbench.action.toggleMaximizedPanel",
@@ -140,6 +150,29 @@
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "!isMac"
   },
+  //#endregion
+  //#region Keybindings
+  {
+    "key": "cmd+k cmd+s",
+    "command": "-workbench.action.openGlobalKeybindings",
+    "when": "isMac"
+  },
+  {
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.openGlobalKeybindings",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+k ctrl+s",
+    "command": "-workbench.action.openGlobalKeybindings",
+    "when": "!isMac"
+  },
+  {
+    "key": "ctrl+k ctrl+k",
+    "command": "workbench.action.openGlobalKeybindings",
+    "when": "!isMac"
+  },
+  //#endregion
   // Make keybindings similar
   {
     "key": "cmd+g",
