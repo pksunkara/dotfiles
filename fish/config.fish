@@ -5,6 +5,7 @@ alias ls="eza"
 alias la="ls -lah --git"
 alias lg="ls -lah --git-repos"
 alias vim="nvim"
+alias jq="jaq"
 
 set -x EDITOR nvim
 set -x CLICOLOR 1

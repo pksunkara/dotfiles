@@ -69,6 +69,9 @@
                   "name": "buf"
                 },
                 {
+                  "name": "difftastic"
+                },
+                {
                   "name": "dive"
                 },
                 {
@@ -129,7 +132,7 @@
                   "name": "hyperfine"
                 },
                 {
-                  "name": "jq"
+                  "name": "jaq"
                 },
                 {
                   "name": "k9s"
@@ -169,6 +172,9 @@
                 },
                 {
                   "name": "supabase"
+                },
+                {
+                  "name": "superfile"
                 },
                 {
                   "name": "tealdeer"
