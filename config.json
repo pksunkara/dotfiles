@@ -169,6 +169,12 @@
                   "name": "ripgrep"
                 },
                 {
+                  "name": "rustup"
+                },
+                {
+                  "name": "rust-analyzer"
+                },
+                {
                   "name": "sad"
                 },
                 {

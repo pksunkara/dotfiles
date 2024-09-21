@@ -115,3 +115,9 @@
 [submodule "alacritty/alacritty-theme"]
 	path = alacritty/alacritty-theme
 	url = https://github.com/alacritty/alacritty-theme
+[submodule "nvim/pack/bundle/start/nvim-lspconfig"]
+	path = nvim/pack/bundle/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig
+[submodule "nvim/pack/bundle/start/typescript-tools.nvim"]
+	path = nvim/pack/bundle/start/typescript-tools.nvim
+	url = https://github.com/pmizio/typescript-tools.nvim
