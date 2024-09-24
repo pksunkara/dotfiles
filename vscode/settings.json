@@ -294,6 +294,7 @@
     "jsonc": false
   },
   "template-string-converter.autoRemoveTemplateString": true,
+  "template-string-converter.addBracketsToProps": true,
   "codesnap.transparentBackground": true,
   "githubIssues.queries": [
     {

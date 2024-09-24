@@ -121,3 +121,12 @@
 [submodule "nvim/pack/bundle/start/typescript-tools.nvim"]
 	path = nvim/pack/bundle/start/typescript-tools.nvim
 	url = https://github.com/pmizio/typescript-tools.nvim
+[submodule "nvim/pack/bundle/start/nvim-treesitter"]
+	path = nvim/pack/bundle/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "nvim/pack/bundle/start/nvim-ts-autotag"]
+	path = nvim/pack/bundle/start/nvim-ts-autotag
+	url = https://github.com/windwp/nvim-ts-autotag
+[submodule "nvim/pack/bundle/start/template-string.nvim"]
+	path = nvim/pack/bundle/start/template-string.nvim
+	url = https://github.com/axelvc/template-string.nvim

@@ -8,5 +8,5 @@ require('typescript-tools').setup({
 })
 
 wk.add({
-  { '<C-.>', '<D-.>', vim.lsp.buf.code_action, desc = "Code actions", mode = "nixsotc" },
+  { '<C-.>', '<D-.>', vim.lsp.buf.code_action, desc = 'Code actions', mode = 'nixsotc' },
 })
