@@ -90,7 +90,8 @@ require('nvim-tree').setup({
 
 wk.add({
   {
-    '<leader>0',
+    '<C-0>',
+    '<D-0>',
     function()
       api.tree.find_file({ open = true, focus = true })
     end,

@@ -1,20 +1,203 @@
 [window]
 option_as_alt = "Both"
 
-# [[keyboard.bindings]]
-# action = "None"
-# key    = "K"
-# mode   = "~Vi|~Search"
-# mods   = "Command"
+# clear
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "K"
+mods   = "Command"
 
-# [[keyboard.bindings]]
-# chars = "\u000c"
-# key   = "L"
-# mode  = "~Vi|~Search"
-# mods  = "Command"
+# Search
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "F"
+mods   = "Command"
 
-# [[keyboard.bindings]]
-# action = "ClearHistory"
-# key    = "L"
-# mode   = "~Vi|~Search"
-# mods   = "Command"
+[[keyboard.bindings]]
+action = "SearchForward"
+key    = "F"
+mode   = "~Search"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "B"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "SearchBackward"
+key    = "B"
+mode   = "~Search"
+mods   = "Control"
+
+# font size
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "0"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "-"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "+"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "="
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "NumpadAdd"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "NumpadSubtract"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key    = "0"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key    = "-"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key    = "+"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key    = "="
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key    = "NumpadAdd"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key    = "NumpadSubtract"
+mods   = "Control"
+
+# tabs
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "Tab"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "Tab"
+mods   = "Command|Shift"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "1"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "2"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "3"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "4"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "5"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "6"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "7"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "8"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "9"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "SelectNextTab"
+key    = "Tab"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "SelectPreviousTab"
+key    = "Tab"
+mods   = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SelectTab1"
+key    = "1"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "SelectTab2"
+key    = "2"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "SelectTab3"
+key    = "3"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "SelectTab4"
+key    = "4"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "SelectTab5"
+key    = "5"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "SelectTab6"
+key    = "6"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "SelectTab7"
+key    = "7"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "SelectTab8"
+key    = "8"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "SelectLastTab"
+key    = "9"
+mods   = "Control"

@@ -1,5 +1,5 @@
 [
-  // cmd+m, cmd+g, cmd+e, cmd+r
+  // cmd+m, cmd+g, cmd+e
   //#region Editor -> Redo
   {
     "key": "shift+cmd+z",
@@ -15,6 +15,23 @@
     "key": "shift+ctrl+z",
     "command": "-redo",
     "when": "!isMac"
+  },
+  //#endregion
+  //#region IDE -> Rename symbol
+  {
+    "key": "f2",
+    "command": "-editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+r",
+    "command": "editor.action.rename",
+    "when": "isMac && editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "editor.action.rename",
+    "when": "!isMac && editorHasRenameProvider && editorTextFocus && !editorReadonly"
   },
   //#endregion
   //#region Files Explorer

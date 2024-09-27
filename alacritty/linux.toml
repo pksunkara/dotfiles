@@ -1,9 +1,111 @@
+# copy-paste
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "C"
+mods   = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key    = "C"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "V"
+mods   = "Control|Shift"
+
 [[keyboard.bindings]]
 action = "Paste"
 key    = "V"
 mods   = "Command"
 
+# clear selection
 [[keyboard.bindings]]
-action = "Copy"
+action = "ClearSelection"
 key    = "C"
+mode   = "Vi|~Search"
+mods   = "Command"
+
+# search
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "F"
+mods   = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SearchForward"
+key    = "F"
+mode   = "~Search"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "B"
+mods   = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SearchBackward"
+key    = "B"
+mode   = "~Search"
+mods   = "Command"
+
+# font size
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "0"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "-"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "+"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "="
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "NumpadAdd"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key    = "NumpadSubtract"
+mods   = "Control"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key    = "0"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key    = "-"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key    = "+"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key    = "="
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key    = "NumpadAdd"
+mods   = "Command"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key    = "NumpadSubtract"
 mods   = "Command"

@@ -1,5 +1,12 @@
 import = ["~/.config/alacritty/alacritty-theme/themes/ayu_dark.toml", "~/.config/alacritty/os.toml"]
 
+[cursor]
+blink_interval = 625
+blink_timeout  = 0
+
+[cursor.style]
+blinking = "Always"
+
 [font]
 size = 13
 

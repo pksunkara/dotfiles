@@ -92,8 +92,16 @@ require('telescope').setup({
   },
 })
 
+local find_files = function()
+  local ok = pcall(builtin.git_files)
+
+  if not ok then
+    builtin.find_files()
+  end
+end
+
 wk.add({
-  { '<C-p>', '<D-p>', builtin.find_files, desc = 'Go to file' },
+  { '<C-p>', '<D-p>', find_files, desc = 'Go to file' },
   { '<leader>b', builtin.buffers, desc = 'Go to buffer' },
   { '<leader>r', builtin.oldfiles, desc = 'Go to recent file' },
   { '<leader>gb', builtin.git_branches, desc = 'Branches' },
@@ -102,8 +110,8 @@ wk.add({
   { '<leader>gfl', builtin.git_bcommits, desc = 'Commits for file' },
   {
     mode = 'nixsotc',
-    { '<C-k>m', builtin.filetypes, desc = 'Change filetype' },
-    { '<C-k><C-t>', builtin.colorscheme, desc = 'Change color theme' },
+    { '<C-k>m', '<D-k>m', builtin.filetypes, desc = 'Change filetype' },
+    { '<C-k><C-t>', '<D-k><D-t>', builtin.colorscheme, desc = 'Change color theme' },
   },
 })
 
