@@ -21,11 +21,16 @@ map_spec = function(mappings)
     local cond = mappings.cond
     mappings.cond = nil
 
+    -- Looks like description is not allowed in nested
+    local desc = mappings.desc
+    mappings.desc = nil
+
     return {
       mappings,
       {
         linux,
         rhs,
+        desc = desc,
         cond = function()
           return vim.fn.has('linux') > 0 and (cond == nil or cond())
         end,
@@ -33,6 +38,7 @@ map_spec = function(mappings)
       {
         mac,
         rhs,
+        desc = desc,
         cond = function()
           return vim.fn.has('mac') > 0 and (cond == nil or cond())
         end,
