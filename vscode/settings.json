@@ -10,10 +10,9 @@
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.editor.empty.hint": "hidden",
-  "workbench.colorTheme": "Catppuccin Mocha Darker Bordered",
-  "workbench.preferredDarkColorTheme": "Bearded Theme feat. Gold D Raynh",
+  "workbench.preferredDarkColorTheme": "Catppuccin Mocha Darker Bordered",
   "workbench.preferredLightColorTheme": "Bearded Theme Coffee Cream",
-  "workbench.preferredHighContrastColorTheme": "Bearded Theme feat. Gold D Raynh",
+  "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha Darker Bordered",
   "workbench.preferredHighContrastLightColorTheme": "Bearded Theme Coffee Cream",
   "workbench.colorCustomizations": {
     "[Solarized*]": {
@@ -101,6 +100,11 @@
   "diffEditor.hideUnchangedRegions.enabled": true,
   "git.autofetch": true,
   "git.ignoreRebaseWarning": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "explicit",
+    "notebook.source.organizeImports": "explicit"
+  },
   "security.workspace.trust.enabled": false,
   "task.quickOpen.skip": true,
   "[c]": {
@@ -174,7 +178,11 @@
   "[python]": {
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
   },
   "[php]": {
     "editor.insertSpaces": true

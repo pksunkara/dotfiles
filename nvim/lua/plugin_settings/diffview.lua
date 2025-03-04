@@ -2,6 +2,17 @@ local wk = require('which-key')
 local diffview = require('diffview')
 local actions = require('diffview.actions')
 
+vim.api.nvim_create_autocmd('BufWinEnter', {
+  group = vim.api.nvim_create_augroup('DiffviewCommitLogPanel', { clear = true }),
+  pattern = 'diffview://*/log/*/commit_log',
+  desc = 'Map keys to close the diffview commit log panel',
+  callback = function(args)
+    vim.keymap.set('n', 'q', '<CMD>q<CR>', { buffer = args.buf, desc = 'Close the panel',
+    })
+    vim.keymap.set('n', '<ESC>', '<CMD>q<CR>', { buffer = args.buf, desc = 'Close the panel' })
+  end,
+})
+
 diffview.setup({
   enhanced_diff_hl = true,
   view = {
@@ -11,13 +22,16 @@ diffview.setup({
   },
   keymaps = {
     view = {
-      ['q'] = diffview.close,
+      { 'n', 'q', diffview.close, { desc = 'Close the panel' } },
     },
     file_panel = {
-      ['q'] = diffview.close,
+      { 'n', 'q', diffview.close, { desc = 'Close the panel' } },
     },
     file_history_panel = {
-      ['q'] = diffview.close,
+      { 'n', 'q', diffview.close, { desc = 'Close the panel' } },
+    },
+    option_panel = {
+      { 'n', '<ESC>', actions.close, { desc = 'Close the panel' } },
     },
   },
 })
