@@ -148,6 +148,9 @@
                   "name": "lazydocker"
                 },
                 {
+                  "name": "ls-lint"
+                },
+                {
                   "name": "nmap"
                 },
                 {
