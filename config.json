@@ -39,6 +39,10 @@
                 "destination": "/Users/pksunkara/.config/git"
               },
               {
+                "source": "jj",
+                "destination": "/Users/pksunkara/.config/jj"
+              },
+              {
                 "source": "tmux",
                 "destination": "/Users/pksunkara/.config/tmux"
               }
@@ -139,6 +143,9 @@
                   "name": "jaq"
                 },
                 {
+                  "name": "jj"
+                },
+                {
                   "name": "k9s"
                 },
                 {
@@ -146,6 +153,9 @@
                 },
                 {
                   "name": "lazydocker"
+                },
+                {
+                  "name": "lefthook"
                 },
                 {
                   "name": "ls-lint"

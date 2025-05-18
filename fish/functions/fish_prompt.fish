@@ -27,13 +27,24 @@ function fish_prompt
 	end
 
 	if test -e Cargo.toml
-		set lang ""
-		set lang_version (rustup show active-toolchain | cut -d' ' -f1 | sed -E "s/-.*//")
+		if type -q rustup
+			set lang ""
+			set lang_version (rustup show active-toolchain | cut -d' ' -f1 | sed -E "s/-.*//")
+		end
+	end
+
+	if test -e pyproject.toml
+		if type -q uv
+			set lang ""
+			set lang_version (uv run python --version | sed -E "s/Python //")
+		end
 	end
 
 	if test -e mix.exs
-		set lang ""
-		set lang_version (elixir -v | sed -n '3,/^$/p' | sed -E -e "s/.*Elixir //" -e "s/ .*//")
+		if type -q elixir
+			set lang ""
+			set lang_version (elixir -v | sed -n '3,/^$/p' | sed -E -e "s/.*Elixir //" -e "s/ .*//")
+		end
 	end
 
 	if test -n "$is_git_repo" -a -z "$have_commits"
